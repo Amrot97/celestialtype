@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natal Chart Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            white-space: pre-wrap;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Natal Chart Generator</h1>
+    <form id="natalChartForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="date_of_birth">Date of Birth (YYYY-MM-DD):</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required>
+        </div>
+        <div class="form-group">
+            <label for="time_of_birth">Time of Birth (HH:MM:SS):</label>
+            <input type="time" id="time_of_birth" name="time_of_birth" step="1">
+        </div>
+        <div class="form-group">
+            <label for="place_of_birth">Place of Birth:</label>
+            <input type="text" id="place_of_birth" name="place_of_birth" required>
+        </div>
+        <button type="submit">Generate Natal Chart</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('natalChartForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const date_of_birth = document.getElementById('date_of_birth').value;
+            const time_of_birth = document.getElementById('time_of_birth').value;
+            const place_of_birth = document.getElementById('place_of_birth').value;
+            
+            const data = {
+                name: name,
+                date_of_birth: date_of_birth,
+                time_of_birth: time_of_birth || null,
+                place_of_birth: place_of_birth
+            };
+            
+            fetch('http://localhost:8000/natal-chart/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultDiv = document.getElementById('result');
+                resultDiv.style.display = 'block';
+                
+                // Display basic information
+                let resultText = `Name: ${data.User_name}\n`;
+                resultText += `Date of Birth: ${data.date_of_birth}\n`;
+                resultText += `Time of Birth: ${data.time_of_birth || 'Not provided'}\n`;
+                resultText += `Place of Birth: ${data.place_of_birth}\n`;
+                resultText += `Coordinates: ${data.coordinates.latitude}, ${data.coordinates.longitude}\n\n`;
+                
+                // Display planet positions
+                resultText += 'Planet Positions:\n';
+                data.planet_positions.forEach(planet => {
+                    const retrograde = planet.movement.retrograde ? ' (Retrograde)' : '';
+                    resultText += `${planet.planet}: ${planet.sign.name} in House ${planet.house}${retrograde}\n`;
+                });
+                
+                resultDiv.textContent = resultText;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                document.getElementById('result').textContent = 'Error: ' + error;
+                document.getElementById('result').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html> 

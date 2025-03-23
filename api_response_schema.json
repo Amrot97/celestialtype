@@ -1,0 +1,518 @@
+{
+    "User_name": {"_type": "string", "value": null},
+    "date_of_birth": {"_type": "string", "value": null},
+    "place_of_birth": {"_type": "string", "value": null},
+    "coordinates": {
+        "latitude": {"_type": "number", "value": null},
+        "longitude": {"_type": "number", "value": null}
+    },
+    "planet_positions": {
+        "_type": "array",
+        "items": {
+            "planet": {"_type": "string", "value": null},
+            "position": {
+                "degrees": {"_type": "number", "value": null},
+                "minutes": {"_type": "number", "value": null},
+                "seconds": {"_type": "number", "value": null}
+            },
+            "sign": {
+                "name": {"_type": "string", "value": null},
+                "modality": {"_type": "string", "value": null},
+                "element": {"_type": "string", "value": null}
+            },
+            "house": {"_type": "number", "value": null},
+            "movement": {
+                "retrograde": {"_type": "boolean", "value": null}
+            }
+        }
+    },
+    "psychologicalInsights": {
+        "_type": "array",
+        "items": {
+            "title": {"_type": "string", "value": null},
+            "planet": {"_type": "string", "value": null},
+            "sign": {
+                "name": {"_type": "string", "value": null},
+                "modality": {"_type": "string", "value": null},
+                "element": {"_type": "string", "value": null}
+            },
+            "traits": {
+                "_type": "array",
+                "items": {
+                    "trait": {"_type": "string", "value": null}
+                }
+            },
+            "explanation": {"_type": "string", "value": null},
+            "innate_talents": {"_type": "string", "value": null},
+            "growth_areas": {"_type": "string", "value": null},
+            "personal_growth": {"_type": "string", "value": null},
+            "closing_affirmation": {"_type": "string", "value": null},
+            "house": {"_type": "string", "value": null},
+            "emotional_strengths": {"_type": "string", "value": null},
+            "emotional_challenges": {"_type": "string", "value": null},
+            "actionable_emotional_care": {"_type": "string", "value": null},
+            "strengths_in_connection": {"_type": "string", "value": null},
+            "challenges_to_refine": {"_type": "string", "value": null},
+            "actionable_strategies": {"_type": "string", "value": null},
+            "affirmation": {"_type": "string", "value": null},
+            "core_themes": {
+                "_type": "array",
+                "items": {
+                    "theme": {"_type": "string", "value": null}
+                }
+            },
+            "collective_purpose": {"_type": "string", "value": null},
+            "strengths": {"_type": "string", "value": null},
+            "challenges": {"_type": "string", "value": null},
+            "actionable_contribution": {"_type": "string", "value": null}
+        }
+    },
+    "has_time": {"_type": "boolean", "value": null},
+    "time_of_birth": {"_type": "string", "value": null},
+    "stelliums": {
+        "sign_stelliums": {
+            "_type": "object",
+            "items": {
+                "sign_name": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                }
+            }
+        },
+        "house_stelliums": {
+            "_type": "object",
+            "items": {
+                "house_number": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                }
+            }
+        },
+        "sign_stellium_strength": {
+            "_type": "object",
+            "items": {
+                "sign_name": {
+                    "score": {"_type": "number", "value": null},
+                    "classification": {"_type": "string", "value": null},
+                    "planet_count": {"_type": "number", "value": null}
+                }
+            }
+        },
+        "house_stellium_strength": {
+            "_type": "object",
+            "items": {
+                "house_number": {
+                    "score": {"_type": "number", "value": null},
+                    "classification": {"_type": "string", "value": null},
+                    "planet_count": {"_type": "number", "value": null}
+                }
+            }
+        }
+    },
+    "stelliumDescriptions": {
+        "_type": "array",
+        "items": {
+            "title": {"_type": "string", "value": null},
+            "description": {"_type": "string", "value": null},
+            "planets": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "planet_count": {"_type": "number", "value": null},
+            "strength": {
+                "score": {"_type": "number", "value": null},
+                "classification": {"_type": "string", "value": null},
+                "planet_count": {"_type": "number", "value": null}
+            },
+            "is_tight_cluster": {"_type": "boolean", "value": null}
+        }
+    },
+    "modalityAnalysis": {
+        "distribution": {
+            "Cardinal": {"_type": "number", "value": null},
+            "Fixed": {"_type": "number", "value": null},
+            "Mutable": {"_type": "number", "value": null}
+        },
+        "planets_by_modality": {
+            "Cardinal": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "Fixed": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "Mutable": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            }
+        },
+        "pattern": {
+            "pattern_type": {"_type": "string", "value": null},
+            "summary": {"_type": "string", "value": null},
+            "life_approach": {"_type": "string", "value": null},
+            "practical_advice": {"_type": "string", "value": null},
+            "dominant_modality": {"_type": "string", "value": null},
+            "percentage": {"_type": "number", "value": null}
+        },
+        "modality_details": {
+            "Cardinal": {
+                "title": {"_type": "string", "value": null},
+                "core_traits": {"_type": "string", "value": null},
+                "description": {"_type": "string", "value": null},
+                "strengths": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "challenges": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "career_insights": {"_type": "string", "value": null},
+                "relationship_insights": {"_type": "string", "value": null},
+                "balance_strategies": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "examples": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "percentage": {"_type": "number", "value": null}
+            },
+            "Fixed": {
+                "title": {"_type": "string", "value": null},
+                "core_traits": {"_type": "string", "value": null},
+                "description": {"_type": "string", "value": null},
+                "strengths": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "challenges": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "career_insights": {"_type": "string", "value": null},
+                "relationship_insights": {"_type": "string", "value": null},
+                "balance_strategies": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "examples": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "percentage": {"_type": "number", "value": null}
+            },
+            "Mutable": {
+                "title": {"_type": "string", "value": null},
+                "core_traits": {"_type": "string", "value": null},
+                "description": {"_type": "string", "value": null},
+                "strengths": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "challenges": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "career_insights": {"_type": "string", "value": null},
+                "relationship_insights": {"_type": "string", "value": null},
+                "balance_strategies": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "examples": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "percentage": {"_type": "number", "value": null}
+            }
+        },
+        "special_cases": {
+            "absent_modalities": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "retrograde_planets": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "critical_degree_planets": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            }
+        }
+    },
+    "elementAnalysis": {
+        "percentages": {
+            "Fire": {"_type": "number", "value": null},
+            "Earth": {"_type": "number", "value": null},
+            "Air": {"_type": "number", "value": null},
+            "Water": {"_type": "number", "value": null}
+        },
+        "planets_by_element": {
+            "Fire": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "Earth": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "Air": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "Water": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            }
+        },
+        "balance_analysis": {
+            "pattern": {
+                "title": {"_type": "string", "value": null},
+                "description": {"_type": "string", "value": null},
+                "strengths": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "development_areas": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                }
+            },
+            "dominant_elements": {
+                "_type": "array",
+                "items": {
+                    "title": {"_type": "string", "value": null},
+                    "core_traits": {"_type": "string", "value": null},
+                    "description": {"_type": "string", "value": null},
+                    "high_description": {"_type": "string", "value": null},
+                    "high_strengths": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "high_challenges": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "low_description": {"_type": "string", "value": null},
+                    "low_challenges": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "development_strategies": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "level": {"_type": "string", "value": null}
+                }
+            },
+            "moderate_elements": {
+                "_type": "array",
+                "items": {
+                    "title": {"_type": "string", "value": null},
+                    "core_traits": {"_type": "string", "value": null},
+                    "description": {"_type": "string", "value": null},
+                    "high_description": {"_type": "string", "value": null},
+                    "high_strengths": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "high_challenges": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "low_description": {"_type": "string", "value": null},
+                    "low_challenges": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "development_strategies": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "level": {"_type": "string", "value": null}
+                }
+            },
+            "lacking_elements": {
+                "_type": "array",
+                "items": {
+                    "title": {"_type": "string", "value": null},
+                    "core_traits": {"_type": "string", "value": null},
+                    "description": {"_type": "string", "value": null},
+                    "low_description": {"_type": "string", "value": null},
+                    "low_challenges": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "development_strategies": {
+                        "_type": "array",
+                        "items": {"_type": "string"}
+                    },
+                    "level": {"_type": "string", "value": null}
+                }
+            },
+            "is_balanced": {"_type": "boolean", "value": null},
+            "percentages": {
+                "Air": {"_type": "number", "value": null},
+                "Water": {"_type": "number", "value": null},
+                "Fire": {"_type": "number", "value": null},
+                "Earth": {"_type": "number", "value": null}
+            }
+        },
+        "personal_planets_analysis": {
+            "percentages": {
+                "Fire": {"_type": "number", "value": null},
+                "Earth": {"_type": "number", "value": null},
+                "Air": {"_type": "number", "value": null},
+                "Water": {"_type": "number", "value": null}
+            },
+            "absent_elements": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            }
+        },
+        "absent_elements": {
+            "_type": "array",
+            "items": {"_type": "string"}
+        },
+        "retrograde_planets": {
+            "_type": "array",
+            "items": {"_type": "string"}
+        },
+        "conscious_unconscious_analysis": {
+            "educational_content": {
+                "title": {"_type": "string", "value": null},
+                "description": {"_type": "string", "value": null},
+                "personal_planets": {"_type": "string", "value": null},
+                "social_planets": {"_type": "string", "value": null},
+                "transpersonal_planets": {"_type": "string", "value": null}
+            },
+            "conscious_elements": {
+                "percentages": {
+                    "Fire": {"_type": "number", "value": null},
+                    "Earth": {"_type": "number", "value": null},
+                    "Air": {"_type": "number", "value": null},
+                    "Water": {"_type": "number", "value": null}
+                },
+                "absent_elements": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "description": {"_type": "string", "value": null}
+            },
+            "bridging_elements": {
+                "percentages": {
+                    "Fire": {"_type": "number", "value": null},
+                    "Earth": {"_type": "number", "value": null},
+                    "Air": {"_type": "number", "value": null},
+                    "Water": {"_type": "number", "value": null}
+                },
+                "absent_elements": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "description": {"_type": "string", "value": null}
+            },
+            "unconscious_elements": {
+                "percentages": {
+                    "Fire": {"_type": "number", "value": null},
+                    "Earth": {"_type": "number", "value": null},
+                    "Air": {"_type": "number", "value": null},
+                    "Water": {"_type": "number", "value": null}
+                },
+                "absent_elements": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "description": {"_type": "string", "value": null}
+            },
+            "significant_differences": {
+                "Fire": {
+                    "conscious": {"_type": "number", "value": null},
+                    "unconscious": {"_type": "number", "value": null},
+                    "difference": {"_type": "number", "value": null},
+                    "interpretation": {"_type": "string", "value": null}
+                },
+                "Earth": {
+                    "conscious": {"_type": "number", "value": null},
+                    "unconscious": {"_type": "number", "value": null},
+                    "difference": {"_type": "number", "value": null},
+                    "interpretation": {"_type": "string", "value": null}
+                },
+                "Air": {
+                    "conscious": {"_type": "number", "value": null},
+                    "unconscious": {"_type": "number", "value": null},
+                    "difference": {"_type": "number", "value": null},
+                    "interpretation": {"_type": "string", "value": null}
+                },
+                "Water": {
+                    "conscious": {"_type": "number", "value": null},
+                    "unconscious": {"_type": "number", "value": null},
+                    "difference": {"_type": "number", "value": null},
+                    "interpretation": {"_type": "string", "value": null}
+                }
+            }
+        }
+    },
+    "elementRelationship": {
+        "primary_element": {"_type": "string", "value": null},
+        "secondary_element": {"_type": "string", "value": null},
+        "primary_percentage": {"_type": "number", "value": null},
+        "secondary_percentage": {"_type": "number", "value": null},
+        "relationship": {
+            "title": {"_type": "string", "value": null},
+            "description": {"_type": "string", "value": null},
+            "strengths": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "challenges": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "integration_strategies": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "psychological_insight": {"_type": "string", "value": null}
+        }
+    },
+    "allElementRelationships": {
+        "_type": "array",
+        "items": {
+            "elements": {
+                "_type": "array",
+                "items": {"_type": "string"}
+            },
+            "percentages": {
+                "_type": "array",
+                "items": {"_type": "number"}
+            },
+            "relationship": {
+                "title": {"_type": "string", "value": null},
+                "description": {"_type": "string", "value": null},
+                "strengths": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "challenges": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "integration_strategies": {
+                    "_type": "array",
+                    "items": {"_type": "string"}
+                },
+                "psychological_insight": {"_type": "string", "value": null}
+            }
+        }
+    },
+    "token_with_data": {
+        "refresh": {"_type": "string", "value": null},
+        "access": {"_type": "string", "value": null},
+        "is_authenticated": {"_type": "boolean", "value": null}
+    }
+} 

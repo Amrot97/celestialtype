@@ -1,0 +1,644 @@
+{
+  "User_name": "Modality Test User",
+  "date_of_birth": "1997-02-17",
+  "place_of_birth": "Racib\u00f3rz, Poland",
+  "coordinates": {
+    "latitude": 50.0917343,
+    "longitude": 18.2196766
+  },
+  "planet_positions": [
+    {
+      "planet": "Sun",
+      "position": {
+        "degrees": 28,
+        "minutes": 19,
+        "seconds": 29
+      },
+      "sign": {
+        "name": "Aquarius",
+        "modality": "Fixed",
+        "element": "Air"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Moon",
+      "position": {
+        "degrees": 28,
+        "minutes": 21,
+        "seconds": 30
+      },
+      "sign": {
+        "name": "Gemini",
+        "modality": "Mutable",
+        "element": "Air"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Pluto",
+      "position": {
+        "degrees": 5,
+        "minutes": 29,
+        "seconds": 25
+      },
+      "sign": {
+        "name": "Sagittarius",
+        "modality": "Mutable",
+        "element": "Fire"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "True North Node",
+      "position": {
+        "degrees": 29,
+        "minutes": 11,
+        "seconds": 27
+      },
+      "sign": {
+        "name": "Virgo",
+        "modality": "Mutable",
+        "element": "Earth"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": true
+      }
+    },
+    {
+      "planet": "True South Node",
+      "position": {
+        "degrees": 29,
+        "minutes": 11,
+        "seconds": 27
+      },
+      "sign": {
+        "name": "Pisces",
+        "modality": "Mutable",
+        "element": "Water"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": true
+      }
+    },
+    {
+      "planet": "Vertex",
+      "position": {
+        "degrees": 21,
+        "minutes": 54,
+        "seconds": 3
+      },
+      "sign": {
+        "name": "Gemini",
+        "modality": "Mutable",
+        "element": "Air"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Part of Fortune",
+      "position": {
+        "degrees": 12,
+        "minutes": 55,
+        "seconds": 43
+      },
+      "sign": {
+        "name": "Cancer",
+        "modality": "Cardinal",
+        "element": "Water"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "True Lilith",
+      "position": {
+        "degrees": 11,
+        "minutes": 46,
+        "seconds": 57
+      },
+      "sign": {
+        "name": "Leo",
+        "modality": "Fixed",
+        "element": "Fire"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Mercury",
+      "position": {
+        "degrees": 11,
+        "minutes": 33,
+        "seconds": 52
+      },
+      "sign": {
+        "name": "Aquarius",
+        "modality": "Fixed",
+        "element": "Air"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Venus",
+      "position": {
+        "degrees": 17,
+        "minutes": 14,
+        "seconds": 22
+      },
+      "sign": {
+        "name": "Aquarius",
+        "modality": "Fixed",
+        "element": "Air"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Mars",
+      "position": {
+        "degrees": 5,
+        "minutes": 9,
+        "seconds": 31
+      },
+      "sign": {
+        "name": "Libra",
+        "modality": "Cardinal",
+        "element": "Air"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": true
+      }
+    },
+    {
+      "planet": "Jupiter",
+      "position": {
+        "degrees": 6,
+        "minutes": 7,
+        "seconds": 16
+      },
+      "sign": {
+        "name": "Aquarius",
+        "modality": "Fixed",
+        "element": "Air"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Saturn",
+      "position": {
+        "degrees": 5,
+        "minutes": 13,
+        "seconds": 5
+      },
+      "sign": {
+        "name": "Aries",
+        "modality": "Cardinal",
+        "element": "Fire"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Uranus",
+      "position": {
+        "degrees": 5,
+        "minutes": 58,
+        "seconds": 24
+      },
+      "sign": {
+        "name": "Aquarius",
+        "modality": "Fixed",
+        "element": "Air"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Neptune",
+      "position": {
+        "degrees": 28,
+        "minutes": 33,
+        "seconds": 52
+      },
+      "sign": {
+        "name": "Capricorn",
+        "modality": "Cardinal",
+        "element": "Earth"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": false
+      }
+    },
+    {
+      "planet": "Chiron",
+      "position": {
+        "degrees": 2,
+        "minutes": 4,
+        "seconds": 50
+      },
+      "sign": {
+        "name": "Scorpio",
+        "modality": "Fixed",
+        "element": "Water"
+      },
+      "house": null,
+      "movement": {
+        "retrograde": true
+      }
+    }
+  ],
+  "psychologicalInsights": [
+    {
+      "title": "Your Ego",
+      "planet": "Sun",
+      "sign": {
+        "name": "Aquarius",
+        "modality": "Fixed",
+        "element": "Air"
+      },
+      "traits": [
+        {
+          "trait": "Innovative"
+        },
+        {
+          "trait": "Humanitarian"
+        },
+        {
+          "trait": "Visionary"
+        },
+        {
+          "trait": "Unconventional"
+        }
+      ],
+      "explanation": "Aquarius Suns are the trailblazers of the zodiac. Their forward-thinking mindset and commitment to progress drive them to challenge norms, advocate for collective change, and envision futures others can't yet see. Guided by a blend of logic and idealism, they thrive in spaces where creativity and social impact intersect.",
+      "innate_talents": "Your Aquarius Sun excels in roles that fuse innovation with community uplift. Professionally, you might thrive as a social entrepreneur launching eco-tech startups, a data scientist mapping solutions for urban inequality, or a community organizer reimagining public spaces for accessibility. In daily life, you're the friend who rallies neighbors to convert vacant lots into urban gardens, hosts brainstorming sessions to solve local issues, or invents a DIY recycling system that goes viral. Your ability to think outside the box turns obstacles into opportunities\u2014whether redesigning a nonprofit's outreach strategy or teaching kids coding through gamified lessons.",
+      "growth_areas": "Your focus on big-picture ideals can sometimes overlook practical details or emotional nuances. For example, you might draft a groundbreaking proposal for workplace equity but struggle to address a teammate's burnout, or prioritize futuristic goals over a partner's need for present-day connection. Your objectivity might also come across as detached during heartfelt conversations.\nTip: Balance vision with grounding. Before finalizing a project, ask, \"What's one small step I can take today to make this real?\" For interpersonal moments, practice empathy by saying, \"I hear you\u2014how can I support you right now?\"",
+      "personal_growth": "Partner with Earth signs (Taurus, Virgo, Capricorn) to root your ideas in reality. Collaborate with a Virgo to pilot a community project\u2014they'll handle logistics while you focus on visionary goals\u2014ensuring your concepts gain traction without losing their transformative edge.\nProfessional/Creative Development: Launch a digital platform crowdsourcing solutions for global challenges (e.g., an app connecting volunteers with micro-projects or a podcast amplifying grassroots innovators). Your knack for uniting technology and humanity will turn abstract ideas into actionable movements.",
+      "closing_affirmation": "Your innovation isn't just clever\u2014it's the blueprint for a more equitable world. Your idealism isn't na\u00efve; it's the audacity to believe humanity can evolve. Disrupt gently, collaborate fiercely, and remember: the future needs your voice to stay daring, compassionate, and unafraid to reimagine what's possible.",
+      "house": "None"
+    },
+    {
+      "title": "Your Subconscious",
+      "planet": "Moon",
+      "sign": {
+        "name": "Gemini",
+        "modality": "Mutable",
+        "element": "Air"
+      },
+      "traits": [
+        {
+          "trait": "Curious"
+        },
+        {
+          "trait": "Expressive"
+        },
+        {
+          "trait": "Dynamic"
+        }
+      ],
+      "explanation": "Your Gemini Moon processes emotions through lively exchanges and intellectual exploration. Feelings are filtered through a lens of curiosity\u2014you seek mental stimulation, variety, and connection to feel emotionally grounded.",
+      "emotional_strengths": "Inner Gifts: You effortlessly shift perspectives, using humor and wit to lighten heavy moods. Your adaptability helps you reframe challenges into learning opportunities. For example, during a conflict, you might crack a joke to ease tension or propose a creative compromise. When feeling stuck, diving into a podcast, book club, or lively debate can reignite your sense of clarity and hope.",
+      "emotional_challenges": "Growth Areas: Overthinking emotions or avoiding vulnerability by staying \"in your head\" can create distance from deeper needs. For instance, you might intellectualize sadness (\"Why shouldn't I feel this way?\") instead of letting yourself simply feel. Tip: Set a 5-minute timer daily to sit quietly and observe emotions without analysis\u2014imagine them as clouds passing through your mind's sky.",
+      "actionable_emotional_care": "Self-Care Rituals: Channel mental energy into hands-on creativity: try sketching while listening to music, or voice-memo journaling to \"talk out\" feelings. Schedule \"micro-adventures\"\u2014like exploring a new caf\u00e9 or trivia night\u2014to satisfy your need for novelty.\nCommunication Tip: Say, \"I'm figuring this out as I talk\u2014thanks for listening,\" to invite patience as you process aloud.",
+      "closing_affirmation": "Your quick mind and playful spirit are gifts\u2014they help you connect, adapt, and find joy in unexpected places. Embrace your love of exploration, but remember: stillness can be a teacher, too. You're allowed to pause, breathe, and let your heart catch up with your thoughts.",
+      "house": "None"
+    },
+    {
+      "title": "Venus in Aquarius",
+      "planet": "Venus",
+      "sign": {
+        "name": "Aquarius",
+        "modality": "Fixed",
+        "element": "Air"
+      },
+      "traits": [
+        {
+          "trait": "Unconventional"
+        },
+        {
+          "trait": "Community-Oriented"
+        },
+        {
+          "trait": "Intellectually Stimulating"
+        }
+      ],
+      "strengths_in_connection": "You attract love through intellectual curiosity and a celebration of individuality. Relationships thrive on shared ideals and quirky adventures\u2014think attending a sci-fi convention, co-organizing a protest, or bonding over futuristic art. In self-care, you recharge by engaging in eclectic hobbies, hosting themed gatherings, or curating a wardrobe that defies trends.",
+      "challenges_to_refine": "Emotional detachment might surface as prioritizing ideas over intimacy. You could deflect a partner's vulnerability with humor or logic. Tip: Practice saying, \"I'm here\u2014let's explore this feeling together,\" to deepen connection.",
+      "actionable_strategies": "Plan a \"reverse date night\" where you and a partner swap unexpected roles (e.g., teaching each other niche skills). Use art or music to express emotions that feel too abstract for words. Create a \"vision wall\" with images and quotes that reflect your ideal blend of freedom and belonging.",
+      "affirmation": "Your love is a revolution\u2014it honors uniqueness, curiosity, and the courage to reimagine bonds. Cherish your independence, but let vulnerability be the bridge where hearts truly unite.",
+      "house": "None"
+    },
+    {
+      "title": "Mars in Libra",
+      "planet": "Mars",
+      "sign": {
+        "name": "Libra",
+        "modality": "Cardinal",
+        "element": "Air"
+      },
+      "traits": [
+        {
+          "trait": "Diplomatic"
+        },
+        {
+          "trait": "Collaborative"
+        },
+        {
+          "trait": "Fair-Minded"
+        }
+      ],
+      "strengths_in_action": "Your Mars in Libra thrives in roles that balance creativity with cooperation\u2014think mediation, interior design, or diplomacy. You excel at harmonizing conflicting priorities, like negotiating team compromises or curating collaborative art projects. For example, you might lead a workplace initiative to improve equity or design a community space that blends aesthetics and functionality. Hobbies like partner dancing, debate clubs, or volunteering for social justice causes channel your drive into creating unity and beauty.",
+      "challenges_to_navigate": "A desire to please others may delay assertive action or lead to overcompromising. You might avoid pitching a bold idea to prevent disagreement. Tip: Practice \"balanced assertiveness\" by scripting one clear need before meetings (e.g., \"I propose we prioritize X, but I'm open to adjustments\").",
+      "actionable_strategies": "Use collaborative tools like shared vision boards or co-working sessions to merge ideas without losing your voice. Schedule \"decision deadlines\" for low-stakes choices (e.g., selecting a project color palette in 10 minutes). Pair work with ambient music or art to keep your environment inspiring.",
+      "affirmation": "Your grace transforms conflict into connection\u2014lead with fairness, but let your voice carve its rightful space.",
+      "house": "None"
+    },
+    {
+      "title": "Uranus in Aquarius",
+      "planet": "Uranus",
+      "sign": {
+        "name": "Aquarius",
+        "modality": "Fixed",
+        "element": "Air"
+      },
+      "core_themes": [
+        {
+          "theme": "Collective Innovation"
+        },
+        {
+          "theme": "Tech Ethics"
+        },
+        {
+          "theme": "Radical Equity"
+        }
+      ],
+      "collective_purpose": "This generation pioneers decentralized systems, merging tech and justice through blockchain-based voting, open-source climate solutions, or neurodiverse education models.",
+      "strengths": "Visionary engineers, they code equitable futures. Think developers of community-owned AI or artists using NFTs to fund social housing.",
+      "challenges": "Detachment may alienate allies. Balancing logic with empathy strengthens solidarity.",
+      "actionable_contribution": "Build apps redistributing surplus resources globally. Organize hackathons tackling ethical AI dilemmas.",
+      "affirmation": "Your code rewires possibility\u2014innovate relentlessly, but let humanity debug your dreams.",
+      "house": "None"
+    },
+    {
+      "title": "Neptune in Capricorn",
+      "planet": "Neptune",
+      "sign": {
+        "name": "Capricorn",
+        "modality": "Cardinal",
+        "element": "Earth"
+      },
+      "core_themes": [
+        {
+          "theme": "Structural Dissolution"
+        },
+        {
+          "theme": "Ethical Ambition"
+        },
+        {
+          "theme": "Pragmatic Spirituality"
+        }
+      ],
+      "collective_purpose": "This generation dismantles corrupt hierarchies, demanding climate accountability, corporate mindfulness programs, or governance models blending ancient wisdom with tech.",
+      "strengths": "Strategic dreamers, they topple outdated systems with precision. Examples include policymakers mandating eco-audits or CEOs advocating 4-day workweeks for mental health.",
+      "challenges": "Rigidity may resist cultural shifts. Flexibility ensures their reforms endure.",
+      "actionable_contribution": "Advocate for interspecies rights in environmental law. Develop DAOs (decentralized organizations) for community-led disaster relief.",
+      "affirmation": "Your resolve reshapes institutions\u2014climb strategically, but let empathy carve your steps.",
+      "house": "None"
+    },
+    {
+      "title": "Your Shadow",
+      "planet": "Pluto",
+      "sign": {
+        "name": "Sagittarius",
+        "modality": "Mutable",
+        "element": "Fire"
+      },
+      "core_themes": [
+        {
+          "theme": "Exploration"
+        },
+        {
+          "theme": "Truth-Seeking"
+        },
+        {
+          "theme": "Idealism"
+        }
+      ],
+      "collective_purpose": "This generation challenges dogma, advocating for cross-cultural understanding through ethical travel, interfaith dialogue, or decentralized education platforms bridging global divides.",
+      "strengths": "Bridge-builders, they expose inequities while fostering exchange. Think journalists documenting humanitarian crises or founders of eco-hostels uniting travelers and locals.",
+      "challenges": "Over-idealism may romanticize solutions without addressing local complexities. Grounding visions in practical collaboration is crucial.",
+      "actionable_contribution": "Volunteer with NGOs promoting global literacy and cultural exchange. Write critical analyses of philosophies underrepresented in mainstream discourse.",
+      "affirmation": "Your quest unites divides\u2014seek boldly, but listen as fiercely as you speak.",
+      "house": "None"
+    }
+  ],
+  "has_time": false,
+  "stelliums": {
+    "sign_stelliums": {
+      "Aquarius": [
+        "Sun",
+        "Mercury",
+        "Venus",
+        "Jupiter",
+        "Uranus"
+      ]
+    }
+  },
+  "stelliumDescriptions": [
+    {
+      "title": "Aquarius Stellium",
+      "description": "With a stellium in Aquarius, you possess extraordinary originality, humanitarian vision, and intellectual independence. You're likely to be exceptionally progressive, innovative, and community-minded. This concentration of energy makes you a natural visionary who values freedom and equality. You may sometimes appear detached or eccentric, but your inventiveness and social consciousness are remarkable strengths. You excel when you can collaborate with like-minded individuals on forward-thinking projects that benefit humanity and challenge outdated systems.",
+      "planets": [
+        "Sun",
+        "Mercury",
+        "Venus",
+        "Jupiter",
+        "Uranus"
+      ],
+      "planet_count": 5
+    }
+  ],
+  "elementsPower": {
+    "Fire": 10.95166163141994,
+    "Earth": 5.66465256797583,
+    "Air": 83.38368580060423,
+    "Water": 0.0
+  },
+  "modalityAnalysis": {
+    "distribution": {
+      "Cardinal": 24.705882352941178,
+      "Fixed": 57.647058823529406,
+      "Mutable": 17.647058823529413
+    },
+    "planets_by_modality": {
+      "Cardinal": [
+        "Mars",
+        "Saturn",
+        "Neptune"
+      ],
+      "Fixed": [
+        "Sun",
+        "Mercury",
+        "Venus",
+        "Jupiter",
+        "Uranus",
+        "Chiron"
+      ],
+      "Mutable": [
+        "Moon",
+        "Pluto"
+      ]
+    },
+    "pattern": {
+      "pattern_type": "Fixed Dominant",
+      "summary": "Your chart shows a dominance of Fixed energy (57.6%), making you naturally oriented toward persistence, stability, and completion.",
+      "life_approach": "You likely approach life as a series of commitments to be honored and projects to be completed. Your natural inclination is to establish stability, maintain what's working, and see things through to the end.",
+      "practical_advice": "Your persistence is a superpower when applied to the right goals. Regularly evaluate whether what you're maintaining still serves your highest good, and practice flexibility with methods while staying committed to your core principles.",
+      "dominant_modality": "Fixed",
+      "percentage": 57.647058823529406
+    },
+    "modality_details": {
+      "Cardinal": {
+        "title": "Cardinal Energy (Aries, Cancer, Libra, Capricorn)",
+        "core_traits": "Initiative, leadership, action-oriented, pioneering",
+        "description": "With limited Cardinal energy, you may find it challenging to take initiative or make the first move in situations. Starting new projects, speaking up first in meetings, or making decisive changes in your life might feel uncomfortable. You likely prefer when others establish direction, after which you can contribute effectively.",
+        "strengths": [
+          "Thoughtful consideration before action prevents impulsive mistakes",
+          "Ability to work within established frameworks effectively",
+          "Skill at improving existing systems rather than replacing them",
+          "Patience with processes that are already in motion",
+          "Less likely to overcommit to too many new initiatives"
+        ],
+        "challenges": [
+          "Hesitation to start new projects or make necessary changes",
+          "Difficulty speaking up first or taking leadership positions",
+          "May wait too long for 'perfect timing' to act",
+          "Can feel stuck in unsatisfactory situations due to inertia",
+          "Might miss opportunities that require quick initiative"
+        ],
+        "career_insights": "You likely perform best in roles where the framework is established but you can contribute meaningfully within it. Consider careers in project management, implementation specialties, consulting for established businesses, or roles where you improve existing systems rather than creating new ones from scratch.",
+        "relationship_insights": "In relationships, you may prefer when others take the lead in planning or making decisions. While this can create harmony, be mindful of expressing your preferences rather than simply going along. Developing appropriate assertiveness will lead to more balanced partnerships.",
+        "balance_strategies": [
+          "Practice 'micro-initiatives' - small actions that build your comfort with starting things",
+          "Set a monthly goal to propose one new idea at work or in your personal life",
+          "Use the '5-second rule': count down from 5 and then take action before hesitation sets in",
+          "Join groups where leadership rotates, giving you structured practice at initiating",
+          "Partner with Cardinal-dominant people for projects, but establish clear roles where you must take some initiative"
+        ],
+        "examples": [
+          "You prefer to join existing projects rather than creating new ones from scratch",
+          "You may hesitate to speak first in meetings even when you have valuable insights",
+          "Making major life changes often requires significant external motivation",
+          "You typically wait for others to establish the framework before contributing",
+          "You may stay in planning mode longer than necessary before taking action"
+        ],
+        "percentage": 24.705882352941178
+      },
+      "Fixed": {
+        "title": "Fixed Energy (Taurus, Leo, Scorpio, Aquarius)",
+        "core_traits": "Persistence, stability, determination, reliability",
+        "description": "With your strong Fixed energy, you excel at maintaining momentum and seeing projects through to completion. Your persistence is remarkable \u2013 when you commit to something, others know it will get done. You provide stability in both work and personal environments, serving as a reliable force that others depend upon.",
+        "strengths": [
+          "Exceptional follow-through that ensures projects reach completion",
+          "Loyalty and reliability that makes you a valued team member and friend",
+          "Ability to work consistently toward long-term goals",
+          "Resilience during challenging periods or setbacks",
+          "Talent for establishing and maintaining productive routines"
+        ],
+        "challenges": [
+          "May resist necessary changes due to preference for stability",
+          "Can be perceived as stubborn when maintaining your position",
+          "Might stay in unsatisfactory situations too long out of commitment",
+          "Can struggle with rapid adaptation to unexpected changes",
+          "May have difficulty letting go of methods that are no longer effective"
+        ],
+        "career_insights": "You thrive in roles requiring consistency, reliability, and long-term focus. Consider careers in project completion, quality assurance, financial planning, facilities management, or any field requiring sustained attention and follow-through. Roles in construction management, long-term healthcare, systems administration, or established institutions leverage your natural strengths.",
+        "relationship_insights": "In relationships, you provide stability and can be counted on through difficult times. Your loyalty is a tremendous asset, though you may sometimes need to work on flexibility. Remember that healthy relationships evolve, and being open to change strengthens rather than threatens your connections.",
+        "balance_strategies": [
+          "Schedule regular 'innovation days' where you deliberately consider new approaches",
+          "Practice the phrase 'Let me consider alternatives' before automatically saying no to changes",
+          "Develop relationships with Cardinal and Mutable people who can help you see different perspectives",
+          "Distinguish between principles (worth maintaining) and methods (which can evolve)",
+          "Create a 'change practice' where you intentionally alter small routines to build adaptability"
+        ],
+        "examples": [
+          "Once you commit to a fitness routine or diet, you maintain it consistently",
+          "You're known for completing what you start, even when motivation wanes",
+          "You've maintained long-term relationships or stayed in positions for extended periods",
+          "During turbulent times, you provide stability that others rely upon",
+          "You prefer thorough planning before making significant changes"
+        ],
+        "percentage": 57.647058823529406
+      },
+      "Mutable": {
+        "title": "Mutable Energy (Gemini, Virgo, Sagittarius, Pisces)",
+        "core_traits": "Adaptability, flexibility, versatility, responsiveness",
+        "description": "With limited Mutable energy, you may find it challenging to adapt quickly to changing circumstances or to see multiple perspectives simultaneously. Transitions and unexpected changes might feel particularly disruptive to you, and you may prefer clear, consistent directions rather than ambiguity or frequent shifts.",
+        "strengths": [
+          "Ability to maintain consistent direction without being easily distracted",
+          "Clear focus on chosen paths without constant reconsideration",
+          "Strength in establishing and maintaining clear boundaries",
+          "Decisiveness that comes from not seeing too many options simultaneously",
+          "Stability that helps others know what to expect from you"
+        ],
+        "challenges": [
+          "Difficulty adapting when plans must change unexpectedly",
+          "May struggle to understand perspectives very different from your own",
+          "Can appear rigid when faced with requests for flexibility",
+          "Might find multitasking or rapidly changing environments stressful",
+          "Can miss opportunities that require quick adaptation"
+        ],
+        "career_insights": "You likely perform best in roles with clear direction and relatively stable conditions. Consider careers with well-defined responsibilities, established protocols, or specialized focus areas. Fields like specialized technical roles, defined administrative positions, focused research, or roles requiring deep expertise in specific areas might suit your focused nature.",
+        "relationship_insights": "In relationships, you bring consistency and clear expectations, which creates a sense of security. Working on developing greater flexibility and understanding of different perspectives will help you navigate the inevitable changes that occur in any relationship. Practice active listening to truly understand others' viewpoints.",
+        "balance_strategies": [
+          "Deliberately expose yourself to different viewpoints through varied media and conversations",
+          "Practice 'what if' scenarios to build mental flexibility before real changes occur",
+          "Develop a 'change response plan' with steps to follow when unexpected shifts happen",
+          "Take small, low-risk opportunities to try different approaches to familiar tasks",
+          "Partner with more Mutable individuals for projects requiring adaptation, and observe their methods"
+        ],
+        "examples": [
+          "You prefer clear, consistent instructions rather than ambiguous guidelines",
+          "Unexpected changes to plans can feel particularly disruptive to your sense of order",
+          "You may find it challenging to understand viewpoints very different from your own",
+          "You work best when you can focus deeply on one task rather than multitasking",
+          "You prefer specialized expertise over generalist knowledge"
+        ],
+        "percentage": 17.647058823529413
+      }
+    }
+  }
+}

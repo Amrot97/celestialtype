@@ -1,0 +1,1271 @@
+{
+    "User_name": "Analysis Test User",
+    "date_of_birth": "1990-08-15",
+    "place_of_birth": "New York, USA",
+    "coordinates": {
+        "latitude": 40.7127281,
+        "longitude": -74.0060152
+    },
+    "planet_positions": [
+        {
+            "planet": "Sun",
+            "position": {
+                "degrees": 22,
+                "minutes": 33,
+                "seconds": 56
+            },
+            "sign": {
+                "name": "Leo",
+                "modality": "Fixed",
+                "element": "Fire"
+            },
+            "house": 10,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Moon",
+            "position": {
+                "degrees": 19,
+                "minutes": 11,
+                "seconds": 47
+            },
+            "sign": {
+                "name": "Gemini",
+                "modality": "Mutable",
+                "element": "Air"
+            },
+            "house": 8,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Ascendant",
+            "position": {
+                "degrees": 1,
+                "minutes": 25,
+                "seconds": 53
+            },
+            "sign": {
+                "name": "Scorpio",
+                "modality": "Fixed",
+                "element": "Water"
+            },
+            "house": 1,
+            "movement": {
+                "retrograde": null
+            }
+        },
+        {
+            "planet": "Pluto",
+            "position": {
+                "degrees": 15,
+                "minutes": 5,
+                "seconds": 23
+            },
+            "sign": {
+                "name": "Scorpio",
+                "modality": "Fixed",
+                "element": "Water"
+            },
+            "house": 1,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Descendant",
+            "position": {
+                "degrees": 1,
+                "minutes": 25,
+                "seconds": 53
+            },
+            "sign": {
+                "name": "Taurus",
+                "modality": "Fixed",
+                "element": "Earth"
+            },
+            "house": 6,
+            "movement": {
+                "retrograde": null
+            }
+        },
+        {
+            "planet": "Midheaven",
+            "position": {
+                "degrees": 7,
+                "minutes": 23,
+                "seconds": 21
+            },
+            "sign": {
+                "name": "Leo",
+                "modality": "Fixed",
+                "element": "Fire"
+            },
+            "house": 10,
+            "movement": {
+                "retrograde": null
+            }
+        },
+        {
+            "planet": "Imum Coeli",
+            "position": {
+                "degrees": 7,
+                "minutes": 23,
+                "seconds": 21
+            },
+            "sign": {
+                "name": "Aquarius",
+                "modality": "Fixed",
+                "element": "Air"
+            },
+            "house": 4,
+            "movement": {
+                "retrograde": null
+            }
+        },
+        {
+            "planet": "True North Node",
+            "position": {
+                "degrees": 7,
+                "minutes": 14,
+                "seconds": 27
+            },
+            "sign": {
+                "name": "Aquarius",
+                "modality": "Fixed",
+                "element": "Air"
+            },
+            "house": 3,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "True South Node",
+            "position": {
+                "degrees": 7,
+                "minutes": 14,
+                "seconds": 27
+            },
+            "sign": {
+                "name": "Leo",
+                "modality": "Fixed",
+                "element": "Fire"
+            },
+            "house": 9,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Vertex",
+            "position": {
+                "degrees": 9,
+                "minutes": 14,
+                "seconds": 22
+            },
+            "sign": {
+                "name": "Gemini",
+                "modality": "Mutable",
+                "element": "Air"
+            },
+            "house": 8,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Part of Fortune",
+            "position": {
+                "degrees": 28,
+                "minutes": 3,
+                "seconds": 44
+            },
+            "sign": {
+                "name": "Leo",
+                "modality": "Fixed",
+                "element": "Fire"
+            },
+            "house": 10,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "True Lilith",
+            "position": {
+                "degrees": 15,
+                "minutes": 58,
+                "seconds": 58
+            },
+            "sign": {
+                "name": "Sagittarius",
+                "modality": "Mutable",
+                "element": "Fire"
+            },
+            "house": 2,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Mercury",
+            "position": {
+                "degrees": 19,
+                "minutes": 31,
+                "seconds": 34
+            },
+            "sign": {
+                "name": "Virgo",
+                "modality": "Mutable",
+                "element": "Earth"
+            },
+            "house": 11,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Venus",
+            "position": {
+                "degrees": 2,
+                "minutes": 7,
+                "seconds": 57
+            },
+            "sign": {
+                "name": "Leo",
+                "modality": "Fixed",
+                "element": "Fire"
+            },
+            "house": 9,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Mars",
+            "position": {
+                "degrees": 21,
+                "minutes": 28,
+                "seconds": 52
+            },
+            "sign": {
+                "name": "Taurus",
+                "modality": "Fixed",
+                "element": "Earth"
+            },
+            "house": 7,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Jupiter",
+            "position": {
+                "degrees": 29,
+                "minutes": 26,
+                "seconds": 6
+            },
+            "sign": {
+                "name": "Cancer",
+                "modality": "Cardinal",
+                "element": "Water"
+            },
+            "house": 9,
+            "movement": {
+                "retrograde": false
+            }
+        },
+        {
+            "planet": "Saturn",
+            "position": {
+                "degrees": 19,
+                "minutes": 51,
+                "seconds": 8
+            },
+            "sign": {
+                "name": "Capricorn",
+                "modality": "Cardinal",
+                "element": "Earth"
+            },
+            "house": 3,
+            "movement": {
+                "retrograde": true
+            }
+        },
+        {
+            "planet": "Uranus",
+            "position": {
+                "degrees": 5,
+                "minutes": 58,
+                "seconds": 2
+            },
+            "sign": {
+                "name": "Capricorn",
+                "modality": "Cardinal",
+                "element": "Earth"
+            },
+            "house": 3,
+            "movement": {
+                "retrograde": true
+            }
+        },
+        {
+            "planet": "Neptune",
+            "position": {
+                "degrees": 12,
+                "minutes": 11,
+                "seconds": 25
+            },
+            "sign": {
+                "name": "Capricorn",
+                "modality": "Cardinal",
+                "element": "Earth"
+            },
+            "house": 3,
+            "movement": {
+                "retrograde": true
+            }
+        },
+        {
+            "planet": "Chiron",
+            "position": {
+                "degrees": 22,
+                "minutes": 28,
+                "seconds": 59
+            },
+            "sign": {
+                "name": "Cancer",
+                "modality": "Cardinal",
+                "element": "Water"
+            },
+            "house": 9,
+            "movement": {
+                "retrograde": false
+            }
+        }
+    ],
+    "psychologicalInsights": [
+        {
+            "title": "Your Ego",
+            "planet": "Sun",
+            "sign": {
+                "name": "Leo",
+                "modality": "Fixed",
+                "element": "Fire"
+            },
+            "traits": [
+                {
+                    "trait": "Confident"
+                },
+                {
+                    "trait": "Charismatic"
+                },
+                {
+                    "trait": "Passionate"
+                },
+                {
+                    "trait": "Generous"
+                }
+            ],
+            "explanation": "Leo Suns are the luminaries of the zodiac. Their radiant confidence and magnetic charisma inspire others to embrace their authenticity and pursue bold goals. Guided by a fiery passion for self-expression, they infuse life with drama, warmth, and loyalty, turning every challenge into a stage for growth.",
+            "innate_talents": "Your Leo Sun thrives in roles that demand vision and motivation. Professionally, you might excel as a theater director rallying a cast to deliver a show-stopping performance, a CEO championing employee empowerment through mentorship programs, or a coach helping athletes break mental barriers. In daily life, you're the friend who plans epic birthday surprises (think renting a food truck for a backyard party), uplifts a discouraged colleague with a heartfelt pep talk, or turns a dull team meeting into an engaging brainstorm with your infectious energy. Your generosity shines when mentoring newcomers at work or organizing a neighborhood talent show to spotlight hidden skills.",
+            "growth_areas": "Your desire to be admired can lead to overextending yourself for applause. For example, you might take on a solo project at work to ensure you get sole credit, or dismiss a friend's event-planning ideas to maintain control. Your love for grandeur might also make routine tasks feel stifling, like skipping budgeting steps for a creative venture or rushing through a partner's heartfelt conversation to chase the next thrill.\nTip: Practice collaborative leadership. Before claiming the spotlight, ask, \"Who can I elevate here?\" Celebrate others' contributions openly to deepen loyalty without dimming your light. For routines, keep a \"spark journal\" noting small wins, like a slow-cooked meal that wowed guests or a gradual fitness milestone.",
+            "personal_growth": "Partner with Water signs (Cancer, Scorpio, Pisces) to balance passion with emotional depth. Co-create a storytelling night with a Pisces\u2014they'll handle poetic themes while you mastermind the production\u2014to merge heart and fire.\nProfessional/Creative Development: Launch a platform showcasing others' talents, like a podcast interviewing unsung heroes in your field or a workshop series where participants teach skills. Your leadership will shine by empowering others.",
+            "closing_affirmation": "Your confidence isn't arrogance\u2014it's the courage to remind others they, too, can shine. Your passion isn't fleeting; it's the spark that turns dreams into legacies. Lead with heart, share the stage freely, and remember: the world needs your fire to stay bold, warm, and unapologetically alive.",
+            "house": "10"
+        },
+        {
+            "title": "Your Subconscious",
+            "planet": "Moon",
+            "sign": {
+                "name": "Gemini",
+                "modality": "Mutable",
+                "element": "Air"
+            },
+            "traits": [
+                {
+                    "trait": "Curious"
+                },
+                {
+                    "trait": "Expressive"
+                },
+                {
+                    "trait": "Dynamic"
+                }
+            ],
+            "explanation": "Your Gemini Moon processes emotions through lively exchanges and intellectual exploration. Feelings are filtered through a lens of curiosity\u2014you seek mental stimulation, variety, and connection to feel emotionally grounded.",
+            "emotional_strengths": "Inner Gifts: You effortlessly shift perspectives, using humor and wit to lighten heavy moods. Your adaptability helps you reframe challenges into learning opportunities. For example, during a conflict, you might crack a joke to ease tension or propose a creative compromise. When feeling stuck, diving into a podcast, book club, or lively debate can reignite your sense of clarity and hope.",
+            "emotional_challenges": "Growth Areas: Overthinking emotions or avoiding vulnerability by staying \"in your head\" can create distance from deeper needs. For instance, you might intellectualize sadness (\"Why shouldn't I feel this way?\") instead of letting yourself simply feel. Tip: Set a 5-minute timer daily to sit quietly and observe emotions without analysis\u2014imagine them as clouds passing through your mind's sky.",
+            "actionable_emotional_care": "Self-Care Rituals: Channel mental energy into hands-on creativity: try sketching while listening to music, or voice-memo journaling to \"talk out\" feelings. Schedule \"micro-adventures\"\u2014like exploring a new caf\u00e9 or trivia night\u2014to satisfy your need for novelty.\nCommunication Tip: Say, \"I'm figuring this out as I talk\u2014thanks for listening,\" to invite patience as you process aloud.",
+            "closing_affirmation": "Your quick mind and playful spirit are gifts\u2014they help you connect, adapt, and find joy in unexpected places. Embrace your love of exploration, but remember: stillness can be a teacher, too. You're allowed to pause, breathe, and let your heart catch up with your thoughts.",
+            "house": "8"
+        },
+        {
+            "title": "Venus in Leo",
+            "planet": "Venus",
+            "sign": {
+                "name": "Leo",
+                "modality": "Fixed",
+                "element": "Fire"
+            },
+            "traits": [
+                {
+                    "trait": "Admired"
+                },
+                {
+                    "trait": "Loyal"
+                },
+                {
+                    "trait": "Generous"
+                }
+            ],
+            "strengths_in_connection": "You attract love through warmth, loyalty, and a talent for making others feel special. Relationships thrive on mutual admiration and grand gestures\u2014think surprise romantic dinners, personalized gifts, or cheering loudly for a partner's achievements. In self-care, you recharge by indulging in luxe experiences: spa days, vibrant fashion, or curating a home that feels like a stage for joy.",
+            "challenges_to_refine": "A need for constant validation might lead to overextending yourself to please others. You could feel hurt if a friend forgets to acknowledge your effort. Tip: Practice self-validation by writing three things you're proud of weekly, regardless of external praise.",
+            "actionable_strategies": "Plan a \"mutual appreciation date\" where you and a loved one exchange heartfelt compliments. Create a \"victory log\" to track personal wins and revisit it when doubting your worth. Wear or display gold accents to remind yourself of your inner radiance.",
+            "affirmation": "Your heart is a masterpiece\u2014it loves fiercely and shines unapologetically. Celebrate your light, but let others' sparks illuminate your journey too.",
+            "house": "9"
+        },
+        {
+            "title": "Mars in Taurus",
+            "planet": "Mars",
+            "sign": {
+                "name": "Taurus",
+                "modality": "Fixed",
+                "element": "Earth"
+            },
+            "traits": [
+                {
+                    "trait": "Persistent"
+                },
+                {
+                    "trait": "Practical"
+                },
+                {
+                    "trait": "Resourceful"
+                }
+            ],
+            "strengths_in_action": "Your Mars in Taurus fuels ambition through steady, deliberate effort. You excel in roles requiring endurance and tangible results\u2014think architecture, sustainable farming, or financial management. For example, you might methodically grow a side hustle into a full-time career or restore a heritage home with painstaking attention to detail. Hobbies like pottery, gardening, or gourmet cooking let you channel energy into creating something lasting and sensory.",
+            "challenges_to_navigate": "Stubbornness might keep you clinging to outdated methods, even when change is necessary. You could delay updating a business strategy because \"it's always worked before.\" Tip: Schedule quarterly check-ins to assess goals\u2014ask, \"Does this still serve my vision?\"",
+            "actionable_strategies": "Break long-term projects into daily or weekly tasks to avoid overwhelm\u2014track progress in a tactile planner or vision board. Integrate short, grounding breaks (like herbal tea rituals or stretching) to maintain stamina without burnout.",
+            "affirmation": "Your patience builds empires\u2014trust the power of slow growth, but let flexibility keep your roots strong.",
+            "house": "7"
+        },
+        {
+            "title": "Uranus in Capricorn",
+            "planet": "Uranus",
+            "sign": {
+                "name": "Capricorn",
+                "modality": "Cardinal",
+                "element": "Earth"
+            },
+            "core_themes": [
+                {
+                    "theme": "Structural Rebellion"
+                },
+                {
+                    "theme": "Institutional Alchemy"
+                },
+                {
+                    "theme": "Pragmatic Utopias"
+                }
+            ],
+            "collective_purpose": "This generation dismantles corrupt hierarchies, demanding climate accountability, corporate transparency, or governance models blending ancient wisdom with futurism.",
+            "strengths": "Strategic rebuilders, they topple outdated systems with precision. Examples include policymakers mandating eco-audits or teens organizing debt strikes for educational reform.",
+            "challenges": "Rigidity may resist rapid cultural shifts. Flexibility ensures their reforms endure.",
+            "actionable_contribution": "Advocate for interspecies rights in environmental law. Develop DAOs (decentralized organizations) for community-led urban planning.",
+            "affirmation": "Your resolve reshapes mountains\u2014climb strategically, but let empathy carve your steps.",
+            "house": "3"
+        },
+        {
+            "title": "Neptune in Capricorn",
+            "planet": "Neptune",
+            "sign": {
+                "name": "Capricorn",
+                "modality": "Cardinal",
+                "element": "Earth"
+            },
+            "core_themes": [
+                {
+                    "theme": "Structural Dissolution"
+                },
+                {
+                    "theme": "Ethical Ambition"
+                },
+                {
+                    "theme": "Pragmatic Spirituality"
+                }
+            ],
+            "collective_purpose": "This generation dismantles corrupt hierarchies, demanding climate accountability, corporate mindfulness programs, or governance models blending ancient wisdom with tech.",
+            "strengths": "Strategic dreamers, they topple outdated systems with precision. Examples include policymakers mandating eco-audits or CEOs advocating 4-day workweeks for mental health.",
+            "challenges": "Rigidity may resist cultural shifts. Flexibility ensures their reforms endure.",
+            "actionable_contribution": "Advocate for interspecies rights in environmental law. Develop DAOs (decentralized organizations) for community-led disaster relief.",
+            "affirmation": "Your resolve reshapes institutions\u2014climb strategically, but let empathy carve your steps.",
+            "house": "3"
+        },
+        {
+            "title": "Your Shadow",
+            "planet": "Pluto",
+            "sign": {
+                "name": "Scorpio",
+                "modality": "Fixed",
+                "element": "Water"
+            },
+            "core_themes": [
+                {
+                    "theme": "Depth"
+                },
+                {
+                    "theme": "Transformation"
+                },
+                {
+                    "theme": "Regeneration"
+                }
+            ],
+            "collective_purpose": "This generation confronts societal shadows, driving LGBTQ+ rights, trauma-informed reform, and financial decentralization. They challenge taboos around power, sexuality, and collective healing.",
+            "strengths": "Alchemists of crisis, they turn pain into empowerment. Examples include whistleblowers exposing corruption or somatic therapists addressing generational trauma.",
+            "challenges": "Obsession with control may breed distrust or burnout. Learning to surrender to collective trust is transformative.",
+            "actionable_contribution": "Create art exploring grief or power dynamics to spark societal dialogue. Launch cooperative platforms democratizing wealth-building for marginalized groups.",
+            "affirmation": "Your depth regenerates the unseen\u2014dig fearlessly, but let trust soften your grip.",
+            "house": "1"
+        }
+    ],
+    "has_time": true,
+    "time_of_birth": "12:00:00",
+    "stelliums": {
+        "sign_stelliums": {
+            "Capricorn (Tight Cluster 1)": [
+                "Uranus",
+                "Neptune",
+                "Saturn"
+            ]
+        },
+        "house_stelliums": {
+            "3 (Tight Cluster 1)": [
+                "Uranus",
+                "Neptune",
+                "Saturn"
+            ]
+        },
+        "sign_stellium_strength": {
+            "Capricorn (Tight Cluster 1)": {
+                "score": 4,
+                "classification": "Mild",
+                "planet_count": 3
+            }
+        },
+        "house_stellium_strength": {
+            "3 (Tight Cluster 1)": {
+                "score": 4,
+                "classification": "Mild",
+                "planet_count": 3
+            }
+        }
+    },
+    "stelliumDescriptions": [
+        {
+            "title": "Capricorn Stellium (Tight Cluster)",
+            "description": "A stellium in Capricorn gives you exceptional ambition, discipline, and organizational ability. You likely have a pronounced sense of responsibility, practicality, and respect for tradition. This concentration of energy makes you incredibly determined, patient, and strategic in pursuing long-term goals. You may sometimes appear stern or status-conscious, but your reliability and capacity for achievement are invaluable gifts. You thrive in structured environments that reward hard work, integrity, and the ability to build enduring legacies.",
+            "planets": [
+                "Uranus",
+                "Neptune",
+                "Saturn"
+            ],
+            "planet_count": 3,
+            "strength": {
+                "score": 4,
+                "classification": "Mild",
+                "planet_count": 3
+            },
+            "is_tight_cluster": true
+        },
+        {
+            "title": "Third House Stellium (Tight Cluster)",
+            "description": "With a stellium in the Third House, you possess extraordinary communication abilities, intellectual curiosity, and adaptability. You're likely to be exceptionally articulate, mentally agile, and connected to your immediate environment and community. This concentration of energy makes you a natural learner, communicator, and networker who thrives on gathering and sharing information. You may sometimes appear scattered or overly talkative, but your mental flexibility and verbal dexterity are remarkable strengths. You excel in environments that offer variety, intellectual stimulation, and opportunities to connect with diverse people and ideas in your local sphere.",
+            "planets": [
+                "Uranus",
+                "Neptune",
+                "Saturn"
+            ],
+            "planet_count": 3,
+            "strength": {
+                "score": 4,
+                "classification": "Mild",
+                "planet_count": 3
+            },
+            "is_tight_cluster": true
+        }
+    ],
+    "modalityAnalysis": {
+        "distribution": {
+            "Cardinal": 32.14082907438956,
+            "Fixed": 47.416240772288475,
+            "Mutable": 20.442930153321978
+        },
+        "planets_by_modality": {
+            "Cardinal": [
+                "Jupiter",
+                "Saturn",
+                "Uranus",
+                "Neptune",
+                "Chiron"
+            ],
+            "Fixed": [
+                "Sun",
+                "Pluto",
+                "Venus",
+                "Mars"
+            ],
+            "Mutable": [
+                "Moon",
+                "Mercury"
+            ]
+        },
+        "pattern": {
+            "pattern_type": "Fixed Dominant",
+            "summary": "Your chart shows a dominance of Fixed energy (47.4%), making you naturally oriented toward persistence, stability, and completion.",
+            "life_approach": "You likely approach life as a series of commitments to be honored and projects to be completed. Your natural inclination is to establish stability, maintain what's working, and see things through to the end.",
+            "practical_advice": "Your persistence is a superpower when applied to the right goals. Regularly evaluate whether what you're maintaining still serves your highest good, and practice flexibility with methods while staying committed to your core principles.",
+            "dominant_modality": "Fixed",
+            "percentage": 47.416240772288475
+        },
+        "modality_details": {
+            "Cardinal": {
+                "title": "Cardinal Energy (Aries, Cancer, Libra, Capricorn)",
+                "core_traits": "Initiative, leadership, action-oriented, pioneering",
+                "description": "With your strong Cardinal energy, you naturally take charge in situations and excel at launching new projects. You're likely the person who gets things moving in your workplace or social circle. This pioneering spirit makes you an excellent starter and innovator, though you may sometimes leave projects unfinished as you move to the next exciting beginning.",
+                "strengths": [
+                    "Natural leadership abilities that others recognize and respond to",
+                    "Excellent at crisis management and decisive action",
+                    "Innovative thinking that leads to new solutions",
+                    "Ability to motivate others and catalyze group action",
+                    "Entrepreneurial spirit and comfort with initiating"
+                ],
+                "challenges": [
+                    "May start too many projects without completing them",
+                    "Can become impatient with slower, methodical processes",
+                    "Might overwhelm others with constant new ideas and initiatives",
+                    "May struggle with the maintenance phase of projects",
+                    "Can experience burnout from always being in 'initiation mode'"
+                ],
+                "career_insights": "You thrive in roles requiring leadership, crisis management, and innovation. Consider entrepreneurship, emergency services, project initiation roles, leadership positions, or fields requiring quick decision-making. Careers in startups, emergency medicine, sales, leadership consulting, or as a business launcher would leverage your natural strengths.",
+                "relationship_insights": "In relationships, you often take the lead in planning activities and resolving issues. Be mindful that partners may sometimes need you to follow their lead or simply maintain comfortable routines. Your decisiveness is valuable, but balance it by developing patience and listening skills.",
+                "balance_strategies": [
+                    "Before starting something new, evaluate your current commitments",
+                    "Partner with people who have strong Fixed energy to help complete what you start",
+                    "Schedule regular 'completion days' focused solely on finishing existing projects",
+                    "Practice mindfulness to become aware of your impulse to start new things",
+                    "Develop a 'one in, one out' rule: finish or delegate one project before beginning another"
+                ],
+                "examples": [
+                    "When your team is stuck in indecision, you naturally step in with a clear plan of action",
+                    "You've started multiple projects or businesses throughout your life",
+                    "In group settings, you often find yourself organizing activities or making suggestions",
+                    "During crises, you quickly assess the situation and begin implementing solutions",
+                    "You regularly introduce new ideas or approaches to your workplace or home"
+                ],
+                "percentage": 32.14082907438956
+            },
+            "Fixed": {
+                "title": "Fixed Energy (Taurus, Leo, Scorpio, Aquarius)",
+                "core_traits": "Persistence, stability, determination, reliability",
+                "description": "With your strong Fixed energy, you excel at maintaining momentum and seeing projects through to completion. Your persistence is remarkable \u2013 when you commit to something, others know it will get done. You provide stability in both work and personal environments, serving as a reliable force that others depend upon.",
+                "strengths": [
+                    "Exceptional follow-through that ensures projects reach completion",
+                    "Loyalty and reliability that makes you a valued team member and friend",
+                    "Ability to work consistently toward long-term goals",
+                    "Resilience during challenging periods or setbacks",
+                    "Talent for establishing and maintaining productive routines"
+                ],
+                "challenges": [
+                    "May resist necessary changes due to preference for stability",
+                    "Can be perceived as stubborn when maintaining your position",
+                    "Might stay in unsatisfactory situations too long out of commitment",
+                    "Can struggle with rapid adaptation to unexpected changes",
+                    "May have difficulty letting go of methods that are no longer effective"
+                ],
+                "career_insights": "You thrive in roles requiring consistency, reliability, and long-term focus. Consider careers in project completion, quality assurance, financial planning, facilities management, or any field requiring sustained attention and follow-through. Roles in construction management, long-term healthcare, systems administration, or established institutions leverage your natural strengths.",
+                "relationship_insights": "In relationships, you provide stability and can be counted on through difficult times. Your loyalty is a tremendous asset, though you may sometimes need to work on flexibility. Remember that healthy relationships evolve, and being open to change strengthens rather than threatens your connections.",
+                "balance_strategies": [
+                    "Schedule regular 'innovation days' where you deliberately consider new approaches",
+                    "Practice the phrase 'Let me consider alternatives' before automatically saying no to changes",
+                    "Develop relationships with Cardinal and Mutable people who can help you see different perspectives",
+                    "Distinguish between principles (worth maintaining) and methods (which can evolve)",
+                    "Create a 'change practice' where you intentionally alter small routines to build adaptability"
+                ],
+                "examples": [
+                    "Once you commit to a fitness routine or diet, you maintain it consistently",
+                    "You're known for completing what you start, even when motivation wanes",
+                    "You've maintained long-term relationships or stayed in positions for extended periods",
+                    "During turbulent times, you provide stability that others rely upon",
+                    "You prefer thorough planning before making significant changes"
+                ],
+                "percentage": 47.416240772288475
+            },
+            "Mutable": {
+                "title": "Mutable Energy (Gemini, Virgo, Sagittarius, Pisces)",
+                "core_traits": "Adaptability, flexibility, versatility, responsiveness",
+                "description": "With limited Mutable energy, you may find it challenging to adapt quickly to changing circumstances or to see multiple perspectives simultaneously. Transitions and unexpected changes might feel particularly disruptive to you, and you may prefer clear, consistent directions rather than ambiguity or frequent shifts.",
+                "strengths": [
+                    "Ability to maintain consistent direction without being easily distracted",
+                    "Clear focus on chosen paths without constant reconsideration",
+                    "Strength in establishing and maintaining clear boundaries",
+                    "Decisiveness that comes from not seeing too many options simultaneously",
+                    "Stability that helps others know what to expect from you"
+                ],
+                "challenges": [
+                    "Difficulty adapting when plans must change unexpectedly",
+                    "May struggle to understand perspectives very different from your own",
+                    "Can appear rigid when faced with requests for flexibility",
+                    "Might find multitasking or rapidly changing environments stressful",
+                    "Can miss opportunities that require quick adaptation"
+                ],
+                "career_insights": "You likely perform best in roles with clear direction and relatively stable conditions. Consider careers with well-defined responsibilities, established protocols, or specialized focus areas. Fields like specialized technical roles, defined administrative positions, focused research, or roles requiring deep expertise in specific areas might suit your focused nature.",
+                "relationship_insights": "In relationships, you bring consistency and clear expectations, which creates a sense of security. Working on developing greater flexibility and understanding of different perspectives will help you navigate the inevitable changes that occur in any relationship. Practice active listening to truly understand others' viewpoints.",
+                "balance_strategies": [
+                    "Deliberately expose yourself to different viewpoints through varied media and conversations",
+                    "Practice 'what if' scenarios to build mental flexibility before real changes occur",
+                    "Develop a 'change response plan' with steps to follow when unexpected shifts happen",
+                    "Take small, low-risk opportunities to try different approaches to familiar tasks",
+                    "Partner with more Mutable individuals for projects requiring adaptation, and observe their methods"
+                ],
+                "examples": [
+                    "You prefer clear, consistent instructions rather than ambiguous guidelines",
+                    "Unexpected changes to plans can feel particularly disruptive to your sense of order",
+                    "You may find it challenging to understand viewpoints very different from your own",
+                    "You work best when you can focus deeply on one task rather than multitasking",
+                    "You prefer specialized expertise over generalist knowledge"
+                ],
+                "percentage": 20.442930153321978
+            }
+        },
+        "special_cases": {
+            "absent_modalities": [],
+            "retrograde_planets": [
+                "Saturn",
+                "Uranus",
+                "Neptune"
+            ],
+            "critical_degree_planets": [
+                "Sun",
+                "Mars"
+            ]
+        }
+    },
+    "elementAnalysis": {
+        "percentages": {
+            "Fire": 32.75705186533212,
+            "Earth": 29.026387625113735,
+            "Air": 20.018198362147405,
+            "Water": 18.198362147406733
+        },
+        "planets_by_element": {
+            "Fire": [
+                "Sun",
+                "Midheaven",
+                "True South Node",
+                "Part of Fortune",
+                "True Lilith",
+                "Venus"
+            ],
+            "Earth": [
+                "Descendant",
+                "Mercury",
+                "Mars",
+                "Saturn",
+                "Uranus",
+                "Neptune"
+            ],
+            "Air": [
+                "Moon",
+                "Imum Coeli",
+                "True North Node",
+                "Vertex"
+            ],
+            "Water": [
+                "Ascendant",
+                "Pluto",
+                "Jupiter",
+                "Chiron"
+            ]
+        },
+        "balance_analysis": {
+            "pattern": {
+                "title": "Balanced Elemental Distribution",
+                "description": "Your chart shows a harmonious balance between all elements, indicating a well-rounded approach to life. You can easily adapt to different situations, drawing on practical stability (Earth), emotional intelligence (Water), mental clarity (Air), and passionate drive (Fire) as needed.",
+                "strengths": [
+                    "Natural adaptability",
+                    "Balanced perspective",
+                    "Multiple problem-solving approaches",
+                    "Well-rounded skill set",
+                    "Versatility in different situations"
+                ],
+                "development_areas": [
+                    "Maintain the existing balance",
+                    "Recognize when to emphasize different elements",
+                    "Learn to consciously shift between approaches",
+                    "Develop expertise while maintaining versatility",
+                    "Help others find their balance"
+                ]
+            },
+            "dominant_elements": [
+                {
+                    "title": "Fire Element (Aries, Leo, Sagittarius)",
+                    "core_traits": "Initiative, passion, creativity, inspiration, dynamic expression",
+                    "description": "Fire represents the transformative power of spirit in action. In the natural world, fire converts matter into energy, and similarly, your Fire element transforms ideas into dynamic expression. This elemental force governs inspiration, creative drive, and the courage to initiate change.",
+                    "high_description": "With strong Fire element, you naturally energize and inspire those around you. Your enthusiasm is contagious, and you excel at initiating projects and motivating others. You're likely the person who sparks new ideas in meetings, leads community initiatives, or inspires friends to pursue their dreams.",
+                    "high_strengths": [
+                        "Natural ability to inspire and motivate others through authentic enthusiasm",
+                        "Quick to recognize and seize opportunities for growth and advancement",
+                        "Creative vision that can transform abstract ideas into concrete action",
+                        "Courage to take initiative and lead others into new territory"
+                    ],
+                    "high_challenges": [
+                        "Risk of burning out from maintaining too high an energy level",
+                        "May overwhelm others with intensity or rapid-fire ideas",
+                        "Tendency to start projects without sufficient planning for follow-through",
+                        "Can become frustrated with slower, more methodical processes"
+                    ],
+                    "level": "high"
+                }
+            ],
+            "moderate_elements": [
+                {
+                    "title": "Air Element (Gemini, Libra, Aquarius)",
+                    "core_traits": "Intelligence, communication, social connection, innovation, mental clarity",
+                    "description": "Air represents the power of thought and connection. In the natural world, air facilitates exchange and movement, and similarly, your Air element enables the flow of ideas and social bonds. This elemental force governs intellectual understanding, communication, and the ability to see multiple perspectives.",
+                    "high_description": "With strong Air element, you naturally excel at processing information and connecting ideas. Your intellectual agility and communication skills make you a natural networker and innovator. You're likely the person who sees unique patterns and develops innovative solutions.",
+                    "high_strengths": [
+                        "Natural ability to process and synthesize complex information",
+                        "Excellence in communication and idea exchange",
+                        "Strong capacity for objective analysis and fair judgment",
+                        "Talent for seeing patterns and making unique connections"
+                    ],
+                    "high_challenges": [
+                        "Risk of becoming too detached from emotions and physical needs",
+                        "May overthink situations rather than taking action",
+                        "Tendency to live in theoretical rather than practical realms",
+                        "Can become scattered when pursuing too many interests"
+                    ],
+                    "low_description": "With minimal Air element, you may find it challenging to detach from personal feelings to gain objective perspective. You might approach life with more emotional or practical considerations than intellectual analysis.",
+                    "low_challenges": [
+                        "Difficulty seeing multiple perspectives in complex situations",
+                        "May struggle with abstract thinking and theoretical concepts",
+                        "Can find it hard to articulate thoughts and ideas clearly",
+                        "Might avoid intellectual discussions or social networking"
+                    ],
+                    "development_strategies": [
+                        "Engage in regular reading across diverse topics",
+                        "Practice writing to clarify and express thoughts",
+                        "Join discussion groups or take classes that encourage intellectual exchange",
+                        "Develop listening skills to better understand different perspectives"
+                    ],
+                    "level": "moderate"
+                },
+                {
+                    "title": "Earth Element (Taurus, Virgo, Capricorn)",
+                    "core_traits": "Stability, practicality, manifestation, resourcefulness, material wisdom",
+                    "description": "Earth represents the power of manifestation and form. In the natural world, earth provides structure and nourishment, and similarly, your Earth element brings ideas into tangible reality. This elemental force governs practical wisdom, resource management, and the ability to create lasting foundations.",
+                    "high_description": "With strong Earth element, you naturally excel at bringing ideas into form and creating tangible results. Your grounded presence provides stability and reliability that others depend upon. You're likely the person who turns visions into step-by-step plans and builds lasting structures.",
+                    "high_strengths": [
+                        "Natural ability to manifest ideas into tangible results",
+                        "Excellence in resource management and practical planning",
+                        "Strong sense of timing and patience in building foundations",
+                        "Reliability that creates trust and stability in all endeavors"
+                    ],
+                    "high_challenges": [
+                        "Risk of becoming too rigid or resistant to change",
+                        "May prioritize security over growth opportunities",
+                        "Tendency to stay in comfort zone rather than take risks",
+                        "Can become overly focused on material aspects"
+                    ],
+                    "low_description": "With minimal Earth element, you may find it challenging to ground ideas in practical reality and create stable foundations. You might approach life with more theoretical or emotional perspectives than practical considerations.",
+                    "low_challenges": [
+                        "Difficulty completing projects and following through on plans",
+                        "May struggle with practical matters like finances and organization",
+                        "Can find it hard to establish routines and consistent habits",
+                        "Might avoid dealing with material world responsibilities"
+                    ],
+                    "development_strategies": [
+                        "Create simple daily routines to build consistency",
+                        "Practice completing one small project before starting another",
+                        "Develop a relationship with nature through gardening or hiking",
+                        "Learn basic financial management and organizational skills"
+                    ],
+                    "level": "moderate"
+                }
+            ],
+            "lacking_elements": [
+                {
+                    "title": "Water Element (Cancer, Scorpio, Pisces)",
+                    "core_traits": "Emotion, intuition, empathy, healing, creative flow",
+                    "description": "Water represents the power of feeling and intuitive wisdom. In the natural world, water flows, nurtures, and transforms, and similarly, your Water element enables emotional depth and healing connections. This elemental force governs empathy, creativity, and the ability to navigate the depths of human experience.",
+                    "low_description": "With minimal Water element, you may find it challenging to access emotional depth, intuitive wisdom, and empathic connection. You might approach feelings with more analysis or practicality than direct experience.",
+                    "low_challenges": [
+                        "Difficulty recognizing and processing emotions as they arise",
+                        "May struggle with empathy and emotional connection",
+                        "Can find it hard to access intuition or trust inner knowing",
+                        "Might avoid emotional vulnerability or intimate sharing"
+                    ],
+                    "development_strategies": [
+                        "Keep an emotion journal to develop greater emotional awareness",
+                        "Practice mindfulness meditation focused on bodily sensations",
+                        "Engage with water-based activities like swimming or bathing rituals",
+                        "Explore creative arts that encourage emotional expression"
+                    ],
+                    "level": "low"
+                }
+            ],
+            "is_balanced": true,
+            "percentages": {
+                "Air": 20.018198362147405,
+                "Water": 18.198362147406733,
+                "Fire": 32.75705186533212,
+                "Earth": 29.026387625113735
+            }
+        },
+        "personal_planets_analysis": {
+            "percentages": {
+                "Fire": 41.66666666666667,
+                "Earth": 33.33333333333333,
+                "Air": 25.0,
+                "Water": 0.0
+            },
+            "absent_elements": [
+                "Water"
+            ]
+        },
+        "absent_elements": [],
+        "retrograde_planets": [
+            "Saturn",
+            "Uranus",
+            "Neptune"
+        ],
+        "conscious_unconscious_analysis": {
+            "educational_content": {
+                "title": "Conscious vs. Unconscious Elements",
+                "description": "In astrology, personal planets (Sun, Moon, Mercury, Venus, Mars) represent conscious aspects of your personality that you can readily access and express. Transpersonal planets (Uranus, Neptune, Pluto) represent unconscious or collective forces that operate more in the background of your psyche. Social planets (Jupiter, Saturn) bridge these realms. Differences between your conscious and unconscious elements can reveal important psychological dynamics.",
+                "personal_planets": "Sun, Moon, Mercury, Venus, Mars",
+                "social_planets": "Jupiter, Saturn",
+                "transpersonal_planets": "Uranus, Neptune, Pluto, Chiron"
+            },
+            "conscious_elements": {
+                "percentages": {
+                    "Fire": 41.66666666666667,
+                    "Earth": 33.33333333333333,
+                    "Air": 25.0,
+                    "Water": 0.0
+                },
+                "absent_elements": [
+                    "Water"
+                ],
+                "description": "These elements represent your conscious experience and how you actively express yourself in the world."
+            },
+            "bridging_elements": {
+                "percentages": {
+                    "Fire": 0.0,
+                    "Earth": 45.945945945945944,
+                    "Air": 0.0,
+                    "Water": 54.054054054054056
+                },
+                "absent_elements": [
+                    "Fire",
+                    "Air"
+                ],
+                "description": "These elements represent the bridge between your conscious and unconscious experience, showing how you structure your life and grow over time."
+            },
+            "unconscious_elements": {
+                "percentages": {
+                    "Fire": 0.0,
+                    "Earth": 53.125,
+                    "Air": 0.0,
+                    "Water": 46.875
+                },
+                "absent_elements": [
+                    "Fire",
+                    "Air"
+                ],
+                "description": "These elements represent deeper unconscious patterns and collective influences that may operate behind the scenes in your psyche."
+            },
+            "significant_differences": {
+                "Fire": {
+                    "conscious": 41.66666666666667,
+                    "unconscious": 0.0,
+                    "difference": -41.66666666666667,
+                    "interpretation": "Your Fire energy is primarily conscious and personally expressed. You readily identify with Fire qualities and express them in your day-to-day personality, though these qualities may not be as deeply rooted in your unconscious patterns. This suggests you've developed these qualities through conscious effort rather than them being innate unconscious patterns."
+                },
+                "Earth": {
+                    "conscious": 33.33333333333333,
+                    "unconscious": 53.125,
+                    "difference": 19.79166666666667,
+                    "interpretation": "Your Earth energy operates more at an unconscious level. While you have Earth qualities, you may not readily identify with them or express them consciously. These qualities may emerge in times of stress, through dreams, or in transformative life periods. Working with this element consciously can unlock hidden potential."
+                },
+                "Air": {
+                    "conscious": 25.0,
+                    "unconscious": 0.0,
+                    "difference": -25.0,
+                    "interpretation": "Your Air energy is primarily conscious and personally expressed. You readily identify with Air qualities and express them in your day-to-day personality, though these qualities may not be as deeply rooted in your unconscious patterns. This suggests you've developed these qualities through conscious effort rather than them being innate unconscious patterns."
+                },
+                "Water": {
+                    "conscious": 0.0,
+                    "unconscious": 46.875,
+                    "difference": 46.875,
+                    "interpretation": "Your Water energy operates more at an unconscious level. While you have Water qualities, you may not readily identify with them or express them consciously. These qualities may emerge in times of stress, through dreams, or in transformative life periods. Working with this element consciously can unlock hidden potential."
+                }
+            }
+        }
+    },
+    "elementRelationship": {
+        "primary_element": "Fire",
+        "secondary_element": "Earth",
+        "primary_percentage": 32.75705186533212,
+        "secondary_percentage": 29.026387625113735,
+        "relationship": {
+            "title": "Fire-Earth Relationship: Manifesting Vision",
+            "description": "When Fire and Earth combine in your chart, there's a dynamic tension between inspiration and manifestation. Fire provides the creative spark, enthusiasm, and vision, while Earth offers practicality, patience, and the ability to build tangible results.",
+            "strengths": [
+                "Ability to transform creative ideas into practical reality",
+                "Balanced approach that combines vision with methodical implementation",
+                "Capacity to inspire others while delivering concrete results",
+                "Natural talent for entrepreneurship and creative business ventures",
+                "Sustainable creativity that doesn't burn out quickly"
+            ],
+            "challenges": [
+                "Internal conflict between wanting immediate action and needing thorough planning",
+                "Frustration when practical limitations constrain creative vision",
+                "Difficulty finding the right pace\u2014Fire wants to rush while Earth wants to be thorough",
+                "May struggle with projects requiring both innovation and detailed execution",
+                "Risk of creative stagnation if Earth energy becomes too dominant"
+            ],
+            "integration_strategies": [
+                "Create a two-phase approach to projects: visioning phase (Fire) followed by implementation phase (Earth)",
+                "Practice patience with the manifestation process while maintaining enthusiasm",
+                "Use Earth energy to create sustainable structures for creative expression",
+                "Balance spontaneity with planning by allowing space for both in your schedule",
+                "Recognize when to shift between inspired action and methodical progress"
+            ],
+            "psychological_insight": "This combination represents the archetypal creator-builder, with the capacity to both envision and construct. Your psychological growth involves learning to honor both your need for creative expression and your desire for tangible accomplishment, recognizing that true mastery comes from integrating these seemingly opposing forces."
+        }
+    },
+    "allElementRelationships": [
+        {
+            "elements": [
+                "Fire",
+                "Earth"
+            ],
+            "percentages": [
+                32.75705186533212,
+                29.026387625113735
+            ],
+            "relationship": {
+                "title": "Fire-Earth Relationship: Manifesting Vision",
+                "description": "When Fire and Earth combine in your chart, there's a dynamic tension between inspiration and manifestation. Fire provides the creative spark, enthusiasm, and vision, while Earth offers practicality, patience, and the ability to build tangible results.",
+                "strengths": [
+                    "Ability to transform creative ideas into practical reality",
+                    "Balanced approach that combines vision with methodical implementation",
+                    "Capacity to inspire others while delivering concrete results",
+                    "Natural talent for entrepreneurship and creative business ventures",
+                    "Sustainable creativity that doesn't burn out quickly"
+                ],
+                "challenges": [
+                    "Internal conflict between wanting immediate action and needing thorough planning",
+                    "Frustration when practical limitations constrain creative vision",
+                    "Difficulty finding the right pace\u2014Fire wants to rush while Earth wants to be thorough",
+                    "May struggle with projects requiring both innovation and detailed execution",
+                    "Risk of creative stagnation if Earth energy becomes too dominant"
+                ],
+                "integration_strategies": [
+                    "Create a two-phase approach to projects: visioning phase (Fire) followed by implementation phase (Earth)",
+                    "Practice patience with the manifestation process while maintaining enthusiasm",
+                    "Use Earth energy to create sustainable structures for creative expression",
+                    "Balance spontaneity with planning by allowing space for both in your schedule",
+                    "Recognize when to shift between inspired action and methodical progress"
+                ],
+                "psychological_insight": "This combination represents the archetypal creator-builder, with the capacity to both envision and construct. Your psychological growth involves learning to honor both your need for creative expression and your desire for tangible accomplishment, recognizing that true mastery comes from integrating these seemingly opposing forces."
+            }
+        },
+        {
+            "elements": [
+                "Fire",
+                "Air"
+            ],
+            "percentages": [
+                32.75705186533212,
+                20.018198362147405
+            ],
+            "relationship": {
+                "title": "Fire-Air Relationship: Inspired Communication",
+                "description": "When Fire and Air combine in your chart, there's a powerful synergy between inspiration and intellect. Fire provides passion, creativity, and enthusiasm, while Air contributes mental clarity, communication skills, and social connection.",
+                "strengths": [
+                    "Exceptional ability to communicate ideas with passion and clarity",
+                    "Creative thinking that combines intuitive leaps with logical analysis",
+                    "Natural talent for inspiring others through speech, writing, or teaching",
+                    "Innovative problem-solving that generates multiple creative solutions",
+                    "Charismatic social presence that engages and energizes groups"
+                ],
+                "challenges": [
+                    "May become scattered when too many exciting ideas compete for attention",
+                    "Risk of starting many projects but completing few as new interests arise",
+                    "Can be overwhelming in social situations with too much energy and talk",
+                    "Potential for overthinking that dampens intuitive creative impulses",
+                    "Difficulty with practical follow-through on brilliant ideas"
+                ],
+                "integration_strategies": [
+                    "Create systems for capturing ideas while maintaining focus on priorities",
+                    "Balance social engagement with solitary creative time",
+                    "Practice grounding techniques when mental energy becomes too scattered",
+                    "Use writing or mind-mapping to channel the flow of inspiration into structured form",
+                    "Collaborate with earth-dominant individuals who can help implement your visions"
+                ],
+                "psychological_insight": "This combination represents the archetypal visionary-communicator, with a natural gift for inspiring others through ideas and expression. Your psychological growth involves learning to harness your abundant mental and creative energy into focused channels that allow your inspirations to take meaningful form in the world."
+            }
+        },
+        {
+            "elements": [
+                "Fire",
+                "Water"
+            ],
+            "percentages": [
+                32.75705186533212,
+                18.198362147406733
+            ],
+            "relationship": {
+                "title": "Fire-Water Relationship: Passionate Depth",
+                "description": "When Fire and Water combine in your chart, there's a dynamic tension between passion and emotion. Fire brings enthusiasm, spontaneity, and creative drive, while Water contributes emotional depth, intuition, and sensitivity.",
+                "strengths": [
+                    "Emotionally authentic creative expression with both passion and depth",
+                    "Intuitive leadership that inspires while remaining sensitive to others",
+                    "Ability to transform emotional experiences into creative inspiration",
+                    "Passionate empathy that allows deep connection with others",
+                    "Capacity for both enthusiastic action and emotional reflection"
+                ],
+                "challenges": [
+                    "Internal conflict between desire for action and need for emotional processing",
+                    "Risk of emotional volatility when fire energy amplifies emotional responses",
+                    "Difficulty maintaining boundaries when empathy and passion combine",
+                    "Potential for creative blocks when emotions overwhelm inspiration",
+                    "May experience intense emotional reactions to creative criticism"
+                ],
+                "integration_strategies": [
+                    "Create rituals that honor both your need for expression and emotional reflection",
+                    "Practice emotional awareness during creative or passionate endeavors",
+                    "Use artistic expression as a bridge between emotional depth and creative fire",
+                    "Balance social engagement with time for emotional processing",
+                    "Develop healthy outlets for intense emotional-creative energy"
+                ],
+                "psychological_insight": "This combination represents the archetypal passionate-empath, with the capacity for both fiery self-expression and deep emotional connection. Your psychological growth involves learning to navigate the sometimes turbulent waters of your emotional life while maintaining the warmth and enthusiasm of your fire nature, creating a unique form of emotionally intelligent passion."
+            }
+        },
+        {
+            "elements": [
+                "Earth",
+                "Air"
+            ],
+            "percentages": [
+                29.026387625113735,
+                20.018198362147405
+            ],
+            "relationship": {
+                "title": "Earth-Air Relationship: Practical Innovation",
+                "description": "When Earth and Air combine in your chart, there's a dynamic tension between practicality and theory. Earth brings groundedness, tangibility, and material focus, while Air contributes intellectual analysis, communication, and abstract thinking.",
+                "strengths": [
+                    "Ability to transform theoretical ideas into practical applications",
+                    "Balanced approach that combines conceptual understanding with real-world implementation",
+                    "Communication skills that can explain complex concepts in accessible ways",
+                    "Innovative problem-solving that considers both practical constraints and creative possibilities",
+                    "Capacity to build systems and structures based on sound principles"
+                ],
+                "challenges": [
+                    "Internal conflict between wanting concrete results and pursuing conceptual understanding",
+                    "Frustration when practical limitations constrain theoretical ideals",
+                    "Difficulty integrating the methodical pace of Earth with the quick mental shifts of Air",
+                    "May struggle with projects requiring both detailed execution and conceptual innovation",
+                    "Risk of overthinking practical matters or under-planning theoretical projects"
+                ],
+                "integration_strategies": [
+                    "Use writing or mind-mapping to bridge abstract thinking and practical planning",
+                    "Practice translating concepts into step-by-step implementation plans",
+                    "Balance social and intellectual activities with hands-on, practical projects",
+                    "Create systems that allow for both theoretical exploration and practical application",
+                    "Recognize when to shift between conceptual thinking and practical action"
+                ],
+                "psychological_insight": "This combination represents the archetypal practical-thinker, with the capacity to both conceptualize and implement. Your psychological growth involves learning to honor both your need for intellectual understanding and your desire for tangible results, recognizing that true innovation comes from bridging the world of ideas with the world of form."
+            }
+        },
+        {
+            "elements": [
+                "Earth",
+                "Water"
+            ],
+            "percentages": [
+                29.026387625113735,
+                18.198362147406733
+            ],
+            "relationship": {
+                "title": "Earth-Water Relationship: Nurturing Foundation",
+                "description": "When Earth and Water combine in your chart, there's a natural synergy between practicality and emotional depth. Earth provides stability, material focus, and methodical approach, while Water contributes intuition, emotional intelligence, and the ability to nurture.",
+                "strengths": [
+                    "Ability to create emotionally supportive environments with practical foundations",
+                    "Natural talent for nurturing projects, relationships, and living things",
+                    "Intuitive understanding of material needs and how to fulfill them",
+                    "Capacity to build structures that honor emotional and practical considerations",
+                    "Reliable emotional presence combined with practical support"
+                ],
+                "challenges": [
+                    "May become overly focused on security at the expense of emotional growth",
+                    "Risk of suppressing emotions to maintain practical stability",
+                    "Tendency to take on too much responsibility for others' emotional and practical needs",
+                    "Difficulty distinguishing between genuine intuition and emotional reactions",
+                    "Can become stuck in comfortable but limiting emotional patterns"
+                ],
+                "integration_strategies": [
+                    "Create daily practices that honor both emotional needs and practical responsibilities",
+                    "Use journaling to explore the relationship between feelings and material concerns",
+                    "Practice setting boundaries that protect both emotional well-being and practical resources",
+                    "Balance nurturing others with self-care and personal resource management",
+                    "Develop decision-making processes that integrate intuition with practical assessment"
+                ],
+                "psychological_insight": "This combination represents the archetypal nurturer-provider, with a natural gift for creating environments where both practical and emotional needs are met. Your psychological growth involves learning to balance your desire to care for others with appropriate boundaries and self-care, recognizing that true nurturing includes honoring your own needs alongside those of others."
+            }
+        },
+        {
+            "elements": [
+                "Air",
+                "Water"
+            ],
+            "percentages": [
+                20.018198362147405,
+                18.198362147406733
+            ],
+            "relationship": {
+                "title": "Air-Water Relationship: Emotional Intelligence",
+                "description": "When Air and Water combine in your chart, there's a dynamic tension between intellect and emotion. Air brings rational thinking, objectivity, and communication skills, while Water contributes emotional awareness, intuition, and psychological depth.",
+                "strengths": [
+                    "Sophisticated emotional intelligence that combines understanding with empathy",
+                    "Ability to articulate complex emotional experiences with clarity",
+                    "Natural talent for psychological insight and interpersonal understanding",
+                    "Creative expression that integrates intellectual concepts with emotional depth",
+                    "Capacity to move fluidly between objective analysis and subjective experience"
+                ],
+                "challenges": [
+                    "Internal conflict between analytical thinking and emotional responses",
+                    "Difficulty integrating logical conclusions with intuitive knowing",
+                    "May intellectualize emotions rather than fully experiencing them",
+                    "Risk of emotional overwhelm when analytical defenses are bypassed",
+                    "Potential for communication issues when emotions cloud clear thinking"
+                ],
+                "integration_strategies": [
+                    "Practice mindfulness to observe both thoughts and emotions without judgment",
+                    "Use journaling to explore the relationship between intellectual understanding and emotional experience",
+                    "Develop a personal language for emotional states that honors both precision and depth",
+                    "Balance social interaction with time for emotional processing and reflection",
+                    "Create decision-making processes that honor both logical analysis and emotional wisdom"
+                ],
+                "psychological_insight": "This combination represents the archetypal empathic-analyst, with the capacity for both intellectual clarity and emotional depth. Your psychological growth involves learning to integrate your thinking and feeling functions, recognizing that true wisdom comes from honoring both the objective patterns your mind perceives and the subjective truths your heart knows."
+            }
+        }
+    ]
+}
