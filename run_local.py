@@ -16,9 +16,13 @@ if __name__ == "__main__":
             "forget to activate a virtual environment?"
         ) from exc
     
+    # Print settings for debugging
+    print("Django settings module:", os.environ.get("DJANGO_SETTINGS_MODULE"))
+    
     # Run migrations to create SQLite database
     if len(sys.argv) == 1:
         execute_from_command_line(["manage.py", "migrate"])
+        execute_from_command_line(["manage.py", "check_templates"])  # Run our template check
         execute_from_command_line(["manage.py", "runserver", "8000"])
     else:
         execute_from_command_line(sys.argv) 

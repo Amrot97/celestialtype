@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natal Chart Test Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f4ff;
+        }
+        header {
+            background: linear-gradient(135deg, #4a2882 0%, #7b5db2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(74, 40, 130, 0.2);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        form {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #4a2882;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background: linear-gradient(135deg, #4a2882 0%, #7b5db2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .results {
+            margin-top: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            display: none;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        .stars {
+            margin-top: 15px;
+            font-size: 1.5em;
+            letter-spacing: 10px;
+        }
+        .endpoint-links {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .endpoint-link {
+            background-color: #f0ebff;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #4a2882;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .endpoint-link:hover {
+            background-color: #e0d6f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Natal Chart Test Form</h1>
+        <p>Enter your birth details to generate a natal chart analysis</p>
+        <div class="stars">✨ 🌙 ⭐ 🪐 ✨</div>
+    </header>
+
+    <form id="natal-chart-form">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="date">Birth Date:</label>
+            <input type="date" id="date" name="date_of_birth" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="time">Birth Time (if known):</label>
+            <input type="time" id="time" name="time_of_birth">
+        </div>
+        
+        <div class="form-group">
+            <label for="place">Birth Place:</label>
+            <input type="text" id="place" name="place_of_birth" placeholder="City, Country" required>
+        </div>
+        
+        <button type="submit">Generate Natal Chart</button>
+    </form>
+    
+    <div class="endpoint-links">
+        <a href="/natal-chart/elements/" class="endpoint-link">🔥 Elements Analysis</a>
+        <a href="/natal-chart/modalities/" class="endpoint-link">🔄 Modalities Analysis</a>
+        <a href="/natal-chart/stelliums/" class="endpoint-link">⭐ Stellium Detection</a>
+        <a href="/endpoints/" class="endpoint-link">📋 All Endpoints</a>
+    </div>
+    
+    <div class="results" id="results">
+        <h2>Your Natal Chart Analysis</h2>
+        <pre id="results-content"></pre>
+    </div>
+
+    <script>
+        document.getElementById('natal-chart-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                date_of_birth: document.getElementById('date').value,
+                time_of_birth: document.getElementById('time').value || null,
+                place_of_birth: document.getElementById('place').value
+            };
+            
+            fetch('/natal-chart/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('results').style.display = 'block';
+                document.getElementById('results-content').textContent = JSON.stringify(data, null, 2);
+                
+                // Scroll to results
+                document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch((error) => {
+                document.getElementById('results').style.display = 'block';
+                document.getElementById('results-content').textContent = 'Error: ' + error;
+            });
+        });
+    </script>
+</body>
+</html> 

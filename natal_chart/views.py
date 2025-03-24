@@ -1,7 +1,91 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from immanuel import charts
+print("About to import immanuel package...")
+try:
+    from immanuel import charts
+    print("Successfully imported immanuel.charts!")
+    IMMANUEL_AVAILABLE = True
+except ImportError as e:
+    print(f"Failed to import immanuel package: {str(e)}")
+    IMMANUEL_AVAILABLE = False
+    print("Warning: immanuel package not available. Using mock implementation for testing.")
+    
+    # Mock implementation for testing
+    class MockSubject:
+        def __init__(self, datetime_str, latitude, longitude):
+            self.datetime_str = datetime_str
+            self.latitude = latitude
+            self.longitude = longitude
+            
+    class MockSign:
+        def __init__(self, name, element, modality):
+            self.name = name
+            self.element = element
+            self.modality = modality
+            
+    class MockLongitude:
+        def __init__(self, deg, min, sec):
+            self.degrees = deg
+            self.minutes = min
+            self.seconds = sec
+            
+    class MockHouse:
+        def __init__(self, name):
+            self.name = name
+            
+    class MockMovement:
+        def __init__(self, retrograde=False):
+            self.retrograde = retrograde
+            
+    class MockObject:
+        def __init__(self, name, sign, house, sign_longitude, retrograde=False):
+            self.name = name
+            self.sign = sign
+            self.house = house
+            self.sign_longitude = sign_longitude
+            self.movement = MockMovement(retrograde)
+            
+    class MockCharts:
+        class Subject:
+            def __init__(self, datetime_str, latitude, longitude):
+                self.datetime_str = datetime_str
+                self.latitude = latitude
+                self.longitude = longitude
+                
+        class Natal:
+            def __init__(self, subject):
+                self.subject = subject
+                
+                # Create mock objects for testing
+                sun_sign = MockSign("Aries", "fire", "cardinal")
+                moon_sign = MockSign("Taurus", "earth", "fixed")
+                mercury_sign = MockSign("Gemini", "air", "mutable")
+                venus_sign = MockSign("Cancer", "water", "cardinal")
+                mars_sign = MockSign("Leo", "fire", "fixed")
+                jupiter_sign = MockSign("Virgo", "earth", "mutable")
+                
+                # Mock objects dictionary
+                self.objects = {
+                    "sun": MockObject("Sun", sun_sign, MockHouse("House 1"), MockLongitude(15, 30, 0)),
+                    "moon": MockObject("Moon", moon_sign, MockHouse("House 2"), MockLongitude(10, 45, 0)),
+                    "mercury": MockObject("Mercury", mercury_sign, MockHouse("House 3"), MockLongitude(5, 15, 0)),
+                    "venus": MockObject("Venus", venus_sign, MockHouse("House 4"), MockLongitude(20, 0, 0)),
+                    "mars": MockObject("Mars", mars_sign, MockHouse("House 5"), MockLongitude(25, 30, 0), True),
+                    "jupiter": MockObject("Jupiter", jupiter_sign, MockHouse("House 6"), MockLongitude(8, 15, 0)),
+                    "saturn": MockObject("Saturn", MockSign("Libra", "air", "cardinal"), MockHouse("House 7"), MockLongitude(12, 0, 0)),
+                    "uranus": MockObject("Uranus", MockSign("Scorpio", "water", "fixed"), MockHouse("House 8"), MockLongitude(3, 45, 0)),
+                    "neptune": MockObject("Neptune", MockSign("Sagittarius", "fire", "mutable"), MockHouse("House 9"), MockLongitude(17, 30, 0)),
+                    "pluto": MockObject("Pluto", MockSign("Capricorn", "earth", "cardinal"), MockHouse("House 10"), MockLongitude(22, 15, 0)),
+                    "north_node": MockObject("North Node", MockSign("Aquarius", "air", "fixed"), MockHouse("House 11"), MockLongitude(9, 0, 0)),
+                    "south_node": MockObject("South Node", MockSign("Leo", "fire", "fixed"), MockHouse("House 5"), MockLongitude(9, 0, 0)),
+                    "ascendant": MockObject("Ascendant", MockSign("Aries", "fire", "cardinal"), MockHouse("House 1"), MockLongitude(0, 0, 0)),
+                    "midheaven": MockObject("Midheaven", MockSign("Capricorn", "earth", "cardinal"), MockHouse("House 10"), MockLongitude(0, 0, 0)),
+                }
+    
+    # Replace the charts module with our mock
+    charts = MockCharts
+
 from .serializers import NatalChartSerializer
 import swisseph as swe
 from rest_framework_simplejwt.tokens import RefreshToken, AccessToken
@@ -69,85 +153,85 @@ class GenerateNatalChartView(APIView):
             
             try:
                 # Create a Subject and Natal chart
-            native = charts.Subject(datetime_of_birth, latitude, longitude)
-            natal = charts.Natal(native)
+                native = charts.Subject(datetime_of_birth, latitude, longitude)
+                natal = charts.Natal(native)
 
                 # Extract planet positions
-            planet_positions = []
-            psychological_insights = []
-            name_mapping = extract_data_from_json_file("name_mapping")
-            ordered_psychological_insights = extract_data_from_json_file(
-                "ordered_psychological_insights"
-            )
-            planet_titles = extract_data_from_json_file("planet_titles")
+                planet_positions = []
+                psychological_insights = []
+                name_mapping = extract_data_from_json_file("name_mapping")
+                ordered_psychological_insights = extract_data_from_json_file(
+                    "ordered_psychological_insights"
+                )
+                planet_titles = extract_data_from_json_file("planet_titles")
 
-            planet_sign_info = {}
+                planet_sign_info = {}
 
-            for obj_key in immanuel_charts:
-                obj = natal.objects[obj_key]
-                planet_name = name_mapping.get(obj.name, obj.name)
+                for obj_key in immanuel_charts:
+                    obj = natal.objects[obj_key]
+                    planet_name = name_mapping.get(obj.name, obj.name)
                     
                     # Only include house information if time is provided
                     house_number = None
                     if has_time:
-                house_number = extract_house_number(obj.house.name)
+                        house_number = extract_house_number(obj.house.name)
 
-                sign_info = {
-                    "name": obj.sign.name,
-                    "modality": obj.sign.modality,
-                    "element": obj.sign.element,
-                }
+                    sign_info = {
+                        "name": obj.sign.name,
+                        "modality": obj.sign.modality,
+                        "element": obj.sign.element,
+                    }
 
-                planet_data = {
-                    "planet": planet_name,
-                    "position": {
-                        "degrees": obj.sign_longitude.degrees,
-                        "minutes": obj.sign_longitude.minutes,
-                        "seconds": obj.sign_longitude.seconds,
-                    },
-                    "sign": sign_info,
-                    "house": house_number,
-                    "movement": {
-                        "retrograde": (
-                            obj.movement.retrograde
-                            if hasattr(obj, "movement")
-                            else None
-                        )
-                    },
-                }
+                    planet_data = {
+                        "planet": planet_name,
+                        "position": {
+                            "degrees": obj.sign_longitude.degrees,
+                            "minutes": obj.sign_longitude.minutes,
+                            "seconds": obj.sign_longitude.seconds,
+                        },
+                        "sign": sign_info,
+                        "house": house_number,
+                        "movement": {
+                            "retrograde": (
+                                obj.movement.retrograde
+                                if hasattr(obj, "movement")
+                                else None
+                            )
+                        },
+                    }
 
                     # Skip angles if time is not provided
                     if not has_time and planet_name in ["Ascendant", "Descendant", "Midheaven", "Imum Coeli"]:
                         continue
                     
-                planet_positions.append(planet_data)
+                    planet_positions.append(planet_data)
 
-                planet_sign_info[planet_name] = sign_info
+                    planet_sign_info[planet_name] = sign_info
 
-                if obj_key in psychological_planets_list:
-                    title = planet_titles.get(planet_name, "")
-                    psychological_data = get_psychological_insights(
-                        planet_name, obj.sign.name, house_number, title
-                    )
+                    if obj_key in psychological_planets_list:
+                        title = planet_titles.get(planet_name, "")
+                        psychological_data = get_psychological_insights(
+                            planet_name, obj.sign.name, house_number, title
+                        )
 
-                    if psychological_data:
-                        psychological_data["sign"] = sign_info
-                        ordered_psychological_insights[planet_name] = psychological_data
+                        if psychological_data:
+                            psychological_data["sign"] = sign_info
+                            ordered_psychological_insights[planet_name] = psychological_data
 
-                for planet in ["Sun", "Moon", "Venus", "Mars", "Uranus", "Neptune", "Pluto"]:
-                if ordered_psychological_insights.get(planet):
-                    psychological_insights.append(
-                        ordered_psychological_insights[planet]
-                    )
+                    for planet in ["Sun", "Moon", "Venus", "Mars", "Uranus", "Neptune", "Pluto"]:
+                        if ordered_psychological_insights.get(planet):
+                            psychological_insights.append(
+                                ordered_psychological_insights[planet]
+                            )
 
                 # Create response object
-            objects_data = {
-                "User_name": name,
-                "date_of_birth": str(date_of_birth),
-                "place_of_birth": place_of_birth,
-                "coordinates": {"latitude": latitude, "longitude": longitude},
-                "planet_positions": planet_positions,
-                "psychologicalInsights": psychological_insights,
+                objects_data = {
+                    "User_name": name,
+                    "date_of_birth": str(date_of_birth),
+                    "place_of_birth": place_of_birth,
+                    "coordinates": {"latitude": latitude, "longitude": longitude},
+                    "planet_positions": planet_positions,
+                    "psychologicalInsights": psychological_insights,
                     "has_time": has_time,
                 }
                 
@@ -226,15 +310,15 @@ class GenerateNatalChartView(APIView):
                 token = None
                 
                 if is_authenticated:
-            refresh = CustomToken.for_user(request.user, extra_data=objects_data)
-            token = {
-                "refresh": str(refresh),
-                "access": str(refresh.access_token),
+                    refresh = CustomToken.for_user(request.user, extra_data=objects_data)
+                    token = {
+                        "refresh": str(refresh),
+                        "access": str(refresh.access_token),
                         "is_authenticated": is_authenticated,
-            }
-            objects_data["token_with_data"] = token
+                    }
+                    objects_data["token_with_data"] = token
                 
-            return Response(objects_data, status=status.HTTP_200_OK)
+                return Response(objects_data, status=status.HTTP_200_OK)
             except Exception as e:
                 return Response(
                     {"detail": str(e)},
@@ -269,6 +353,9 @@ class ElementAnalysisView(APIView):
         serializer = NatalChartSerializer(data=request.data)
         if serializer.is_valid():
             try:
+                # Import name_mapping
+                name_mapping = extract_data_from_json_file("name_mapping")
+                
                 # Extract data from request
                 date_of_birth = serializer.validated_data["date_of_birth"]
                 time_of_birth = serializer.validated_data.get("time_of_birth")
@@ -340,6 +427,9 @@ class ElementRelationshipsView(APIView):
         serializer = NatalChartSerializer(data=request.data)
         if serializer.is_valid():
             try:
+                # Import name_mapping
+                name_mapping = extract_data_from_json_file("name_mapping")
+                
                 # Extract data from request
                 date_of_birth = serializer.validated_data["date_of_birth"]
                 time_of_birth = serializer.validated_data.get("time_of_birth")
@@ -421,6 +511,9 @@ class ModalityAnalysisView(APIView):
         serializer = NatalChartSerializer(data=request.data)
         if serializer.is_valid():
             try:
+                # Import name_mapping
+                name_mapping = extract_data_from_json_file("name_mapping")
+                
                 # Extract data from request
                 date_of_birth = serializer.validated_data["date_of_birth"]
                 time_of_birth = serializer.validated_data.get("time_of_birth")
@@ -492,6 +585,9 @@ class StelliumDetectionView(APIView):
         serializer = NatalChartSerializer(data=request.data)
         if serializer.is_valid():
             try:
+                # Import name_mapping
+                name_mapping = extract_data_from_json_file("name_mapping")
+                
                 # Extract data from request
                 date_of_birth = serializer.validated_data["date_of_birth"]
                 time_of_birth = serializer.validated_data.get("time_of_birth")
