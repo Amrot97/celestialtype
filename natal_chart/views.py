@@ -235,12 +235,16 @@ class GenerateNatalChartView(APIView):
                     if planet in ordered_psychological_insights:
                         psychological_insights.append(ordered_psychological_insights[planet])
 
-                # Create response object
-                objects_data = {
-                    "User_name": name,
+                # Store user data for passing to tab generators
+                user_data = {
+                    "name": name,
                     "date_of_birth": str(date_of_birth),
                     "place_of_birth": place_of_birth,
-                    "coordinates": {"latitude": latitude, "longitude": longitude},
+                    "coordinates": {"latitude": latitude, "longitude": longitude}
+                }
+
+                # Create response object with only essential fields
+                objects_data = {
                     "psychologicalInsights": psychological_insights,
                     "has_time": has_time,
                 }
@@ -311,10 +315,10 @@ class GenerateNatalChartView(APIView):
                 # Generate overview tab data
                 from .views_methods.overview_tab_generator import generate_overview_tab
                 overview_tab_data = generate_overview_tab(
-                    user_name=name,
-                    date_of_birth=str(date_of_birth),
-                    place_of_birth=place_of_birth,
-                    coordinates={"latitude": latitude, "longitude": longitude},
+                    user_name=user_data["name"],
+                    date_of_birth=user_data["date_of_birth"],
+                    place_of_birth=user_data["place_of_birth"],
+                    coordinates=user_data["coordinates"],
                     psychological_insights=psychological_insights,
                     stellium_descriptions=stellium_descriptions,
                     modality_analysis=modality_analysis,

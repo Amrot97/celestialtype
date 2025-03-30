@@ -23,14 +23,8 @@ The response includes the following main sections:
 
 ```json
 {
-  "User_name": "string",
-  "date_of_birth": "string",
-  "place_of_birth": "string",
-  "coordinates": {
-    "latitude": float,
-    "longitude": float
-  },
   "has_time": boolean,
+  "time_of_birth": "string",  // Only included if has_time is true
   "overview": {...},                // Overview data for the app's Overview tab
   "psychologicalInsights": [...],  // Array of insights
   "elements_tab": {...},          // Consolidated element analysis for UI
