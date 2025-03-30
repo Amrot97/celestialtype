@@ -47,13 +47,19 @@ def format_modality_section(modality_analysis):
     # Get detailed descriptions
     description = modality_analysis.get("description", {})
     
+    # Get core_traits from MODALITY_DESCRIPTIONS if available
+    from natal_chart.views_methods.planet_descriptions.modality_descriptions import MODALITY_DESCRIPTIONS
+    core_traits = ""
+    if dominant_modality in MODALITY_DESCRIPTIONS:
+        core_traits = MODALITY_DESCRIPTIONS[dominant_modality].get("core_traits", "")
+    
     # Format key information about the dominant modality
     return {
         "has_dominant_modality": True,
         "dominant_modality": dominant_modality,
+        "core_traits": core_traits,
         "distribution": modality_analysis.get("modality_percentages", []),
         "title": description.get("dominant_title", f"{dominant_modality} Energy"),
-        "core_traits": description.get("dominant_core_traits", ""),
         "summary": description.get("pattern_summary", description.get("overall", "")),
         "detailed_description": description.get("dominant_description", ""),
         "strengths": description.get("dominant_strengths", []),
