@@ -167,13 +167,10 @@ def get_sun_sign_description(sign_name):
     if not description:
         return None
         
-    # Format the traits as a list of dictionaries
-    traits_list = [{"trait": trait.strip()} for trait in description["traits"].split(", ")]
-    
     # Format the response
     return {
         "title": f"Sun in {sign_name}",
-        "traits": traits_list,
+        "traits": description["traits"],
         "explanation": description["explanation"],
         "innate_talents": description["innate_talents"],
         "growth_areas": description["growth_areas"],

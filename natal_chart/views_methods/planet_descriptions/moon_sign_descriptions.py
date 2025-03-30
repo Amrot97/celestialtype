@@ -167,13 +167,10 @@ def get_moon_sign_description(sign_name):
     if not description:
         return None
         
-    # Format the traits as a list of dictionaries
-    traits_list = [{"trait": trait.strip()} for trait in description["traits"].split(", ")]
-    
     # Format the response
     return {
         "title": f"Moon in {sign_name}",
-        "traits": traits_list,
+        "traits": description["traits"],
         "explanation": description["explanation"],
         "emotional_strengths": description["emotional_strengths"],
         "emotional_challenges": description["emotional_challenges"],

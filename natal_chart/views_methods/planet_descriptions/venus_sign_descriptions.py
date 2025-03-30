@@ -155,13 +155,10 @@ def get_venus_sign_description(sign_name):
     if not description:
         return None
         
-    # Format the traits as a list of dictionaries
-    traits_list = [{"trait": trait.strip()} for trait in description["traits"].split(", ")]
-    
     # Format the response
     return {
         "title": f"Venus in {sign_name}",
-        "traits": traits_list,
+        "traits": description["traits"],
         "strengths_in_connection": description["strengths_in_connection"],
         "challenges_to_refine": description["challenges_to_refine"],
         "actionable_strategies": description["actionable_strategies"],

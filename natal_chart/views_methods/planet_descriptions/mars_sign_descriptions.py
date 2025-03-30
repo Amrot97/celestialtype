@@ -155,13 +155,10 @@ def get_mars_sign_description(sign_name):
     if not description:
         return None
         
-    # Format the traits as a list of dictionaries
-    traits_list = [{"trait": trait.strip()} for trait in description["traits"].split(", ")]
-    
     # Format the response
     return {
         "title": f"Mars in {sign_name}",
-        "traits": traits_list,
+        "traits": description["traits"],
         "strengths_in_action": description["strengths_in_action"],
         "challenges_to_navigate": description["challenges_to_navigate"],
         "actionable_strategies": description["actionable_strategies"],
