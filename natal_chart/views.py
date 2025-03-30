@@ -237,6 +237,11 @@ class GenerateNatalChartView(APIView):
                         # Add the subtitle from planet_titles
                         if planet in planet_titles:
                             insight["subtitle"] = planet_titles[planet]
+                        # Add the planet name and sign information
+                        insight["planet"] = planet
+                        # Get the sign information from planet_sign_info
+                        if planet in planet_sign_info:
+                            insight["sign"] = planet_sign_info[planet]["name"]
                         psychological_insights.append(insight)
 
                 # Store user data for passing to tab generators

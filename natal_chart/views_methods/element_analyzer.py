@@ -289,9 +289,23 @@ def separate_conscious_unconscious_elements(planets):
         transpersonal_analysis
     )
     
+    # Convert to name/value pair format
+    personal_formatted = []
+    transpersonal_formatted = []
+    
+    for element in ["fire", "earth", "air", "water"]:
+        personal_formatted.append({
+            "name": element.capitalize(),
+            "value": personal_analysis[element]
+        })
+        transpersonal_formatted.append({
+            "name": element.capitalize(),
+            "value": transpersonal_analysis[element]
+        })
+    
     return {
-        "personal_planets": personal_analysis,
-        "transpersonal_planets": transpersonal_analysis,
+        "personal_planets": personal_formatted,
+        "transpersonal_planets": transpersonal_formatted,
         "interpretation": interpretation
     }
 
@@ -593,12 +607,12 @@ def generate_elements_tab_response(planets):
     # Step 7: Structure the response for UI
     return {
         "distribution": {
-            "fire": element_analysis['percentages']['fire'],
-            "earth": element_analysis['percentages']['earth'],
-            "air": element_analysis['percentages']['air'],
-            "water": element_analysis['percentages']['water'],
+            "Fire": element_analysis['percentages']['fire'],
+            "Earth": element_analysis['percentages']['earth'],
+            "Air": element_analysis['percentages']['air'],
+            "Water": element_analysis['percentages']['water'],
             "element_percentages": element_analysis.get('element_percentages', []),
-            "dominant_elements": dominant_elements,
+            "dominant_elements": [element.capitalize() for element in dominant_elements],
             "title": balance_title,
             "description": element_analysis['description']['overall']
         },

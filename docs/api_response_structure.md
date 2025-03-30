@@ -24,7 +24,7 @@ The response includes the following main sections:
 ```json
 {
   "has_time": boolean,
-  "time_of_birth": "string",  // Only included if has_time is true
+  "time_of_birth": "HH:MM:SS",  // Only included if has_time is true
   "overview": {...},                // Overview data for the app's Overview tab
   "psychologicalInsights": [...],  // Array of insights
   "elements_tab": {...},          // Consolidated element analysis for UI
@@ -135,12 +135,14 @@ Consolidated summary data for the Overview tab:
 
 ## Psychological Insights
 
-Array of objects, each representing a psychological insight for a planet:
+Each planet insight contains the following structure:
 
 ```json
 {
   "title": "Planet in Sign",
   "subtitle": "Descriptive subtitle (e.g., 'Your Core Identity & Purpose')",
+  "planet": "Sun|Moon|Mercury|Venus|Mars|Jupiter|Saturn|Uranus|Neptune|Pluto", // Planet name
+  "sign": "Aries|Taurus|Gemini|...|Pisces", // Sign name
   "traits": "Comma-separated list of traits",
   "explanation": "General explanation of the placement",
   
@@ -179,18 +181,18 @@ Comprehensive element analysis data for UI rendering:
 ```json
 {
   "distribution": {
-    "fire": integer,
-    "earth": integer,
-    "air": integer,
-    "water": integer,
+    "Fire": integer,
+    "Earth": integer,
+    "Air": integer,
+    "Water": integer,
     "element_percentages": [
       {
-        "name": "fire|earth|air|water",
+        "name": "Fire|Earth|Air|Water",
         "value": integer
       },
       // Sorted by value in descending order
     ],
-    "dominant_elements": ["element1", "element2"],
+    "dominant_elements": ["Fire", "Earth"], // Capitalized element names
     "title": "Your Element Balance: Element-Element Emphasis",
     "description": "Description of elemental balance meaning"
   },
@@ -215,18 +217,20 @@ Comprehensive element analysis data for UI rendering:
     ]
   },
   "conscious_vs_unconscious": {
-    "personal_planets": {
-      "fire": integer,
-      "earth": integer,
-      "air": integer,
-      "water": integer
-    },
-    "transpersonal_planets": {
-      "fire": integer,
-      "earth": integer,
-      "air": integer,
-      "water": integer
-    },
+    "personal_planets": [
+      {
+        "name": "Fire|Earth|Air|Water",
+        "value": integer
+      },
+      // Additional elements
+    ],
+    "transpersonal_planets": [
+      {
+        "name": "Fire|Earth|Air|Water",
+        "value": integer
+      },
+      // Additional elements
+    ],
     "interpretation": "Analysis of conscious and unconscious elemental patterns"
   },
   "allElementRelationships": [
