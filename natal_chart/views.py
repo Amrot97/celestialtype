@@ -256,12 +256,9 @@ class GenerateNatalChartView(APIView):
                         include_points=False,  # Set to True to include points like North Node
                         tight_orb=True  # Detect tight stelliums (planets within 8 degrees)
                     )
-                    # Don't include stelliums in the response
-                    # objects_data["stelliums"] = stelliums
                     
                     # Get stellium descriptions
                     stellium_descriptions = get_stellium_descriptions(stelliums)
-                    objects_data["stelliumDescriptions"] = stellium_descriptions
                 else:
                     # For time-less charts, only include sign stelliums
                     sign_stelliums = detect_sign_stelliums_only(
@@ -270,21 +267,15 @@ class GenerateNatalChartView(APIView):
                         include_points=False,  # Set to True to include points like North Node
                         tight_orb=True  # Detect tight stelliums (planets within 8 degrees)
                     )
-                    # Don't include stelliums in the response
-                    # objects_data["stelliums"] = sign_stelliums
                     
                     # Get only sign stellium descriptions
-                    sign_stellium_descriptions = get_sign_stellium_descriptions_only(sign_stelliums)
-                    objects_data["stelliumDescriptions"] = sign_stellium_descriptions
+                    stellium_descriptions = get_sign_stellium_descriptions_only(sign_stelliums)
                 
                 # Calculate elements power (always include this)
                 signs_power = calculate_signs_power(planet_positions)
-                # We'll keep this calculation but not include it in the response
-                # as it's redundant with elementAnalysis.percentages
                 
-                # Generate modality analysis (new addition)
+                # Generate modality analysis
                 modality_analysis = generate_modality_analysis(planet_positions)
-                objects_data["modalityAnalysis"] = modality_analysis
                 
                 # Generate element analysis (new addition)
                 # Convert planet_positions to the format expected by element_analyzer
@@ -324,7 +315,7 @@ class GenerateNatalChartView(APIView):
                     place_of_birth=place_of_birth,
                     coordinates={"latitude": latitude, "longitude": longitude},
                     psychological_insights=psychological_insights,
-                    stellium_descriptions=objects_data.get("stelliumDescriptions", []),
+                    stellium_descriptions=stellium_descriptions,
                     modality_analysis=modality_analysis,
                     elements_tab=elements_tab_data
                 )
@@ -333,7 +324,7 @@ class GenerateNatalChartView(APIView):
                 # Generate patterns tab data
                 from .views_methods.patterns_tab_generator import generate_patterns_tab
                 patterns_tab_data = generate_patterns_tab(
-                    stellium_descriptions=objects_data.get("stelliumDescriptions", []),
+                    stellium_descriptions=stellium_descriptions,
                     modality_analysis=modality_analysis
                 )
                 objects_data["patterns_tab"] = patterns_tab_data

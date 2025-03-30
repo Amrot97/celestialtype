@@ -33,8 +33,6 @@ The response includes the following main sections:
   "has_time": boolean,
   "overview": {...},                // Overview data for the app's Overview tab
   "psychologicalInsights": [...],  // Array of insights
-  "stelliumDescriptions": [...],   // Array of stellium descriptions
-  "modalityAnalysis": {...},       // Modality distribution analysis
   "elements_tab": {...},          // Consolidated element analysis for UI
   "patterns_tab": {...},          // Consolidated patterns (modality and stelliums) for UI
   "allElementRelationships": [...]  // All significant element relationships
