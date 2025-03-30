@@ -140,6 +140,7 @@ Array of objects, each representing a psychological insight for a planet:
 ```json
 {
   "title": "Planet in Sign",
+  "subtitle": "Descriptive subtitle (e.g., 'Your Core Identity & Purpose')",
   "traits": "Comma-separated list of traits",
   "explanation": "General explanation of the placement",
   

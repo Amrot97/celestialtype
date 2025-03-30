@@ -233,7 +233,11 @@ class GenerateNatalChartView(APIView):
                 main_planets = ["Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
                 for planet in main_planets:
                     if planet in ordered_psychological_insights:
-                        psychological_insights.append(ordered_psychological_insights[planet])
+                        insight = ordered_psychological_insights[planet]
+                        # Add the subtitle from planet_titles
+                        if planet in planet_titles:
+                            insight["subtitle"] = planet_titles[planet]
+                        psychological_insights.append(insight)
 
                 # Store user data for passing to tab generators
                 user_data = {
