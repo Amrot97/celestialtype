@@ -34,8 +34,7 @@ The response includes the following main sections:
   "psychologicalInsights": [...],  // Array of insights
   "stelliumDescriptions": [...],   // Array of stellium descriptions
   "modalityAnalysis": {...},       // Modality distribution analysis
-  "elementAnalysis": {...},        // Elemental distribution analysis
-  "elementRelationship": {...},    // Primary element relationship
+  "elements_tab": {...},          // Consolidated element analysis for UI
   "allElementRelationships": [...]  // All significant element relationships
 }
 ```
@@ -129,56 +128,56 @@ Analysis of Cardinal, Fixed, and Mutable energies:
 }
 ```
 
-## Element Analysis
+## Elements Tab Structure
 
-Analysis of Fire, Earth, Air, and Water elements:
+Comprehensive element analysis data for UI rendering:
 
 ```json
 {
-  "counts": {
-    "fire": float,
-    "earth": float,
-    "air": float,
-    "water": float
-  },
-  "percentages": {
+  "distribution": {
     "fire": integer,
     "earth": integer,
     "air": integer,
-    "water": integer
+    "water": integer,
+    "dominant_elements": ["element1", "element2"],
+    "title": "Your Element Balance: Element-Element Emphasis",
+    "description": "Description of elemental balance meaning"
   },
-  "dominant_element": "fire|earth|air|water",
-  "weakest_element": "fire|earth|air|water",
-  "element_balance": {
-    "fire_earth": "Balance description between fire and earth",
-    "air_water": "Balance description between air and water"
+  "relationship": {
+    "primary_relationship": "element1-element2",
+    "title": "Element Relationship: Element1-Element2",
+    "subtitle": "Element1-Element2 Relationship: Descriptive Title",
+    "description": "Description of how these elements interact",
+    "strengths": [
+      "Strength1",
+      "Strength2",
+      "Strength3",
+      "Strength4",
+      "Strength5"
+    ],
+    "integration_strategies": [
+      "Strategy1",
+      "Strategy2",
+      "Strategy3",
+      "Strategy4",
+      "Strategy5"
+    ]
   },
-  "description": {
-    "dominant": "Your dominant element is X.",
-    "weakest": "Your least expressed element is Y.",
-    "fire": "Description of fire element expression",
-    "earth": "Description of earth element expression",
-    "air": "Description of air element expression",
-    "water": "Description of water element expression",
-    "overall": "Overall elemental balance description"
+  "conscious_vs_unconscious": {
+    "personal_planets": {
+      "fire": integer,
+      "earth": integer,
+      "air": integer,
+      "water": integer
+    },
+    "transpersonal_planets": {
+      "fire": integer,
+      "earth": integer,
+      "air": integer,
+      "water": integer
+    },
+    "interpretation": "Analysis of conscious and unconscious elemental patterns"
   }
-}
-```
-
-## Element Relationship
-
-Analysis of the relationship between the two most dominant elements:
-
-```json
-{
-  "primary_element": "fire|earth|air|water",
-  "secondary_element": "fire|earth|air|water",
-  "primary_percentage": integer,
-  "secondary_percentage": integer,
-  "difference": integer,
-  "balance": "dominant|strong|moderate|balanced",
-  "description": "Description of how these elements interact",
-  "balance_description": "Description of the balance between these elements"
 }
 ```
 
