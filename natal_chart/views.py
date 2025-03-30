@@ -218,11 +218,14 @@ class GenerateNatalChartView(APIView):
                             psychological_data["sign"] = sign_info
                             ordered_psychological_insights[planet_name] = psychological_data
 
-                    for planet in ["Sun", "Moon", "Venus", "Mars", "Uranus", "Neptune", "Pluto"]:
-                        if ordered_psychological_insights.get(planet):
-                            psychological_insights.append(
-                                ordered_psychological_insights[planet]
-                            )
+                # Create a new psychological insights array with only the main planets
+                # This replaces the previous implementation to avoid duplicates
+                psychological_insights = []
+                # Only include the main planets we want to show insights for
+                main_planets = ["Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
+                for planet in main_planets:
+                    if planet in ordered_psychological_insights:
+                        psychological_insights.append(ordered_psychological_insights[planet])
 
                 # Create response object
                 objects_data = {
@@ -230,7 +233,6 @@ class GenerateNatalChartView(APIView):
                     "date_of_birth": str(date_of_birth),
                     "place_of_birth": place_of_birth,
                     "coordinates": {"latitude": latitude, "longitude": longitude},
-                    "planet_positions": planet_positions,
                     "psychologicalInsights": psychological_insights,
                     "has_time": has_time,
                 }
