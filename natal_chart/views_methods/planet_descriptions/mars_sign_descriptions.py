@@ -161,8 +161,6 @@ def get_mars_sign_description(sign_name):
     # Format the response
     return {
         "title": f"Mars in {sign_name}",
-        "planet": "Mars",
-        "sign": sign_name,
         "traits": traits_list,
         "strengths_in_action": description["strengths_in_action"],
         "challenges_to_navigate": description["challenges_to_navigate"],

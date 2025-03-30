@@ -173,8 +173,6 @@ def get_moon_sign_description(sign_name):
     # Format the response
     return {
         "title": f"Moon in {sign_name}",
-        "planet": "Moon",
-        "sign": sign_name,
         "traits": traits_list,
         "explanation": description["explanation"],
         "emotional_strengths": description["emotional_strengths"],

@@ -161,8 +161,6 @@ def get_venus_sign_description(sign_name):
     # Format the response
     return {
         "title": f"Venus in {sign_name}",
-        "planet": "Venus",
-        "sign": sign_name,
         "traits": traits_list,
         "strengths_in_connection": description["strengths_in_connection"],
         "challenges_to_refine": description["challenges_to_refine"],

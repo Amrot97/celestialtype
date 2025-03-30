@@ -167,15 +167,10 @@ def get_pluto_sign_description(sign_name):
     if not description:
         return None
         
-    # Format the core themes as a list of dictionaries
-    themes_list = [{"theme": theme.strip()} for theme in description["core_themes"].split(", ")]
-    
     # Format the response
     return {
         "title": f"Pluto in {sign_name}",
-        "planet": "Pluto",
-        "sign": sign_name,
-        "core_themes": themes_list,
+        "core_themes": description["core_themes"],
         "collective_purpose": description["collective_purpose"],
         "strengths": description["strengths"],
         "challenges": description["challenges"],

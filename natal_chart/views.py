@@ -215,7 +215,12 @@ class GenerateNatalChartView(APIView):
                         )
 
                         if psychological_data:
-                            psychological_data["sign"] = sign_info
+                            # Remove the redundant fields we don't need to display
+                            if "planet" in psychological_data:
+                                del psychological_data["planet"]
+                            if "sign" in psychological_data:
+                                del psychological_data["sign"]
+                            
                             ordered_psychological_insights[planet_name] = psychological_data
 
                 # Create a new psychological insights array with only the main planets

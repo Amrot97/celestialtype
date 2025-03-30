@@ -173,8 +173,6 @@ def get_sun_sign_description(sign_name):
     # Format the response
     return {
         "title": f"Sun in {sign_name}",
-        "planet": "Sun",
-        "sign": sign_name,
         "traits": traits_list,
         "explanation": description["explanation"],
         "innate_talents": description["innate_talents"],
