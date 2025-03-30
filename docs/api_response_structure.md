@@ -31,11 +31,113 @@ The response includes the following main sections:
     "longitude": float
   },
   "has_time": boolean,
+  "overview": {...},                // Overview data for the app's Overview tab
   "psychologicalInsights": [...],  // Array of insights
   "stelliumDescriptions": [...],   // Array of stellium descriptions
   "modalityAnalysis": {...},       // Modality distribution analysis
   "elements_tab": {...},          // Consolidated element analysis for UI
   "allElementRelationships": [...]  // All significant element relationships
+}
+```
+
+## Overview Tab Structure
+
+Consolidated summary data for the Overview tab:
+
+```json
+{
+  "basic_info": {
+    "name": "string",
+    "sun_sign": "string",
+    "date_of_birth": "string",
+    "place_of_birth": {
+      "name": "string",
+      "coordinates": {
+        "latitude": float,
+        "longitude": float
+      }
+    }
+  },
+  "cosmic_profile": {
+    "elemental_balance": {
+      "distribution": [
+        {
+          "name": "Fire",
+          "value": integer
+        },
+        {
+          "name": "Earth",
+          "value": integer
+        },
+        {
+          "name": "Air",
+          "value": integer
+        },
+        {
+          "name": "Water",
+          "value": integer
+        }
+      ],
+      "dominant_elements": ["element1", "element2"],
+      "description": "Description of elemental balance"
+    },
+    "modality_balance": [
+      {
+        "name": "Cardinal",
+        "value": integer
+      },
+      {
+        "name": "Fixed",
+        "value": integer
+      },
+      {
+        "name": "Mutable",
+        "value": integer
+      }
+    ],
+    "dominant_planets": [
+      {
+        "name": "Sun",
+        "value": integer
+      },
+      {
+        "name": "Moon",
+        "value": integer
+      },
+      {
+        "name": "Venus",
+        "value": integer
+      }
+    ]
+  },
+  "key_insights": {
+    "sun": {
+      "sign": "string",
+      "title": "Core Identity",
+      "description": "Description of Sun's influence"
+    },
+    "moon": {
+      "sign": "string",
+      "title": "Emotions",
+      "description": "Description of Moon's influence"
+    },
+    "venus": {
+      "sign": "string",
+      "title": "Values & Love",
+      "description": "Description of Venus's influence"
+    },
+    "mars": {
+      "sign": "string",
+      "title": "Action & Drive",
+      "description": "Description of Mars's influence"
+    }
+  },
+  "stellium": {
+    "has_stellium": boolean,
+    "title": "string",
+    "subtitle": "string",
+    "description": "string"
+  }
 }
 ```
 
@@ -102,6 +204,13 @@ Analysis of Cardinal, Fixed, and Mutable energies:
     "fixed": integer,
     "mutable": integer
   },
+  "modality_percentages": [
+    {
+      "name": "cardinal|fixed|mutable",
+      "value": integer
+    },
+    // Sorted by value in descending order
+  ],
   "description": {
     "dominant": "One sentence summary of dominant modality",
     "cardinal": "Description of cardinal energy expression",
@@ -139,6 +248,13 @@ Comprehensive element analysis data for UI rendering:
     "earth": integer,
     "air": integer,
     "water": integer,
+    "element_percentages": [
+      {
+        "name": "fire|earth|air|water",
+        "value": integer
+      },
+      // Sorted by value in descending order
+    ],
     "dominant_elements": ["element1", "element2"],
     "title": "Your Element Balance: Element-Element Emphasis",
     "description": "Description of elemental balance meaning"
@@ -208,7 +324,40 @@ Array of significant element relationships:
 
 `POST /natal-chart/elements/`
 
-Returns just the element analysis section from the main response.
+Returns the element analysis with both the traditional percentages object and the new element_percentages array format.
+
+```json
+{
+  "counts": {
+    "fire": float,
+    "earth": float,
+    "air": float,
+    "water": float
+  },
+  "percentages": {
+    "fire": integer,
+    "earth": integer,
+    "air": integer,
+    "water": integer
+  },
+  "element_percentages": [
+    {
+      "name": "fire|earth|air|water",
+      "value": integer
+    },
+    // Sorted by value in descending order
+  ],
+  "dominant_element": "fire|earth|air|water",
+  "weakest_element": "fire|earth|air|water",
+  "element_balance": {
+    "fire_earth": "string",
+    "air_water": "string"
+  },
+  "description": {
+    // Descriptions of element expressions
+  }
+}
+```
 
 ### Element Relationships Endpoint
 
@@ -220,7 +369,28 @@ Returns element relationship data.
 
 `POST /natal-chart/modalities/`
 
-Returns just the modality analysis section from the main response.
+Returns the modality analysis with both the traditional percentages object and the new modality_percentages array format.
+
+```json
+{
+  "dominant_modality": "cardinal|fixed|mutable",
+  "percentages": {
+    "cardinal": integer,
+    "fixed": integer,
+    "mutable": integer
+  },
+  "modality_percentages": [
+    {
+      "name": "cardinal|fixed|mutable",
+      "value": integer
+    },
+    // Sorted by value in descending order
+  ],
+  "description": {
+    // Detailed modality descriptions
+  }
+}
+```
 
 ### Stellium Detection Endpoint
 

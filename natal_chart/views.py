@@ -316,6 +316,20 @@ class GenerateNatalChartView(APIView):
                 if all_relationships:
                     objects_data["allElementRelationships"] = all_relationships
                 
+                # Generate overview tab data
+                from .views_methods.overview_tab_generator import generate_overview_tab
+                overview_tab_data = generate_overview_tab(
+                    user_name=name,
+                    date_of_birth=str(date_of_birth),
+                    place_of_birth=place_of_birth,
+                    coordinates={"latitude": latitude, "longitude": longitude},
+                    psychological_insights=psychological_insights,
+                    stellium_descriptions=objects_data.get("stelliumDescriptions", []),
+                    modality_analysis=modality_analysis,
+                    elements_tab=elements_tab_data
+                )
+                objects_data["overview"] = overview_tab_data
+                
                 # Check if user is authenticated before creating a token
                 is_authenticated = request.user.is_authenticated
                 token = None
@@ -425,6 +439,20 @@ class ElementAnalysisView(APIView):
 
                 # Generate element analysis
                 element_analysis = analyze_elements(planet_positions)
+                
+                # Ensure element_percentages is included in the response
+                if "element_percentages" not in element_analysis:
+                    # Create it if not already present (for backward compatibility)
+                    element_percentages = []
+                    for element, value in element_analysis["percentages"].items():
+                        element_percentages.append({
+                            "name": element,
+                            "value": value
+                        })
+                    # Sort by value in descending order
+                    element_percentages = sorted(element_percentages, key=lambda x: x["value"], reverse=True)
+                    element_analysis["element_percentages"] = element_percentages
+                
                 return Response(element_analysis, status=status.HTTP_200_OK)
             except Exception as e:
                 return Response(
@@ -585,7 +613,16 @@ class ModalityAnalysisView(APIView):
 
                 # Generate modality analysis
                 modality_analysis = generate_modality_analysis(planet_positions)
-                return Response(modality_analysis, status=status.HTTP_200_OK)
+                
+                # Create a response with the consistent format
+                response_data = {
+                    "dominant_modality": modality_analysis["dominant_modality"],
+                    "percentages": modality_analysis["percentages"],
+                    "modality_percentages": modality_analysis.get("modality_percentages", []),
+                    "description": modality_analysis["description"]
+                }
+                
+                return Response(response_data, status=status.HTTP_200_OK)
             except Exception as e:
                 return Response(
                     {"detail": str(e)},

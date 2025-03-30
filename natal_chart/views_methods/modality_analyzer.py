@@ -83,10 +83,22 @@ def generate_modality_analysis(planets):
     # Generate descriptions based on modality distribution
     description = generate_modality_description(dominant_modality, percentages, modalities)
     
+    # Format modality percentages as array of objects for consistent API structure
+    modality_percentages = []
+    for modality, value in percentages.items():
+        modality_percentages.append({
+            "name": modality,
+            "value": value
+        })
+    
+    # Sort by value in descending order for better presentation
+    modality_percentages = sorted(modality_percentages, key=lambda x: x["value"], reverse=True)
+    
     # Return the dominant modality, percentages, and description in the analysis
     return {
         "dominant_modality": dominant_modality,
-        "percentages": percentages,
+        "percentages": percentages,  # Keep original format for backward compatibility
+        "modality_percentages": modality_percentages,  # New format matching dominant_planets structure
         "description": description
     }
     
