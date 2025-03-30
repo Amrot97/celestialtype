@@ -8,5 +8,6 @@ urlpatterns = [
     path("elements/relationships/", views.ElementRelationshipsView.as_view(), name="element_relationships"),
     path("modalities/", views.ModalityAnalysisView.as_view(), name="modality_analysis"),
     path("stelliums/", views.StelliumDetectionView.as_view(), name="stellium_detection"),
+    path("patterns/", views.PatternsTabView.as_view(), name="patterns_tab"),
     path("test/", TemplateView.as_view(template_name="natal_chart/test_form.html"), name="test_form"),
 ]

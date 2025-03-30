@@ -36,6 +36,7 @@ The response includes the following main sections:
   "stelliumDescriptions": [...],   // Array of stellium descriptions
   "modalityAnalysis": {...},       // Modality distribution analysis
   "elements_tab": {...},          // Consolidated element analysis for UI
+  "patterns_tab": {...},          // Consolidated patterns (modality and stelliums) for UI
   "allElementRelationships": [...]  // All significant element relationships
 }
 ```
@@ -297,6 +298,50 @@ Comprehensive element analysis data for UI rendering:
 }
 ```
 
+## Patterns Tab Structure
+
+Consolidated patterns data combining modality analysis and stellium information:
+
+```json
+{
+  "modality": {
+    "has_dominant_modality": boolean,
+    "dominant_modality": "cardinal|fixed|mutable",
+    "distribution": [
+      {
+        "name": "cardinal|fixed|mutable",
+        "value": integer
+      },
+      // Sorted by value in descending order
+    ],
+    "title": "Modality Name (Sign List)",
+    "core_traits": "Key traits of the modality",
+    "summary": "Overall description of modality pattern",
+    "detailed_description": "Detailed description of modality expression",
+    "strengths": ["Strength1", "Strength2", ...],
+    "challenges": ["Challenge1", "Challenge2", ...],
+    "practical_advice": "Practical advice for this modality pattern",
+    "life_approach": "How this modality pattern affects life approach",
+    "career_insights": "Career guidance based on modality",
+    "relationship_insights": "Relationship dynamics based on modality",
+    "balance_strategies": ["Strategy1", "Strategy2", ...]
+  },
+  "stellium": {
+    "has_stellium": boolean,
+    "count": integer,
+    "stelliums": [
+      {
+        "planets": ["Planet1", "Planet2", "Planet3", ...],
+        "title": "X Planets in Sign",
+        "subtitle": "Type of Stellium",
+        "description": "Detailed description of the stellium's effect"
+      },
+      // Additional stelliums if present
+    ]
+  }
+}
+```
+
 ## All Element Relationships
 
 Array of significant element relationships:
@@ -396,4 +441,10 @@ Returns the modality analysis with both the traditional percentages object and t
 
 `POST /natal-chart/stelliums/`
 
-Returns just the stellium descriptions section from the main response. 
+Returns just the stellium descriptions section from the main response.
+
+### Patterns Tab Endpoint
+
+`POST /natal-chart/patterns/`
+
+Returns consolidated patterns data combining modality analysis and stellium information, structured for the Patterns tab UI. 

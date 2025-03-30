@@ -204,4 +204,100 @@ The Elements tab provides a detailed analysis of the user's elemental distributi
 }
 ```
 
+Note: The actual response will be dynamically generated based on the user's birth chart data. The above example is for illustrative purposes only.
+
+## Patterns Tab
+
+The Patterns tab provides insights into the significant astrological patterns in the user's chart, focusing on modality distribution and stellium configurations.
+
+### Structure
+
+1. **Modality Pattern Section**
+   - Title with the dominant modality (e.g., "Cardinal Energy (Aries, Cancer, Libra, Capricorn)")
+   - Chart showing percentages for modalities:
+     - Cardinal
+     - Fixed
+     - Mutable
+   - Core traits of the dominant modality
+   - Summary of the modality pattern and its influence
+   - **Strengths and Challenges**
+     - Two side-by-side sections:
+       - Strengths: Bullet points of advantages from this modality pattern
+       - Challenges: Bullet points of potential difficulties with this modality pattern
+   - **Life Approach**
+     - Description of how this modality pattern affects the user's approach to life
+   - **Practical Advice**
+     - Actionable strategies for leveraging strengths and addressing challenges
+   - **Additional Insights** (expandable sections)
+     - Career Insights
+     - Relationship Insights
+     - Balance Strategies
+
+2. **Stellium Section** (conditional)
+   - For each stellium:
+     - Title (e.g., "4 Planets in Capricorn")
+     - Subtitle indicating the type of stellium (e.g., "Tight Sign Stellium")
+     - List of planets involved
+     - Description explaining the significance and influence of the stellium
+   - If multiple stelliums present, each is displayed in its own card or section
+
+### API Response Structure for Patterns Tab
+
+```json
+{
+  "patterns_tab": {
+    "modality": {
+      "has_dominant_modality": true,
+      "dominant_modality": "Cardinal",
+      "distribution": [
+        {"name": "Cardinal", "value": 55},
+        {"name": "Fixed", "value": 30},
+        {"name": "Mutable", "value": 15}
+      ],
+      "title": "Cardinal Energy (Aries, Cancer, Libra, Capricorn)",
+      "core_traits": "Initiative, leadership, action-oriented, pioneering",
+      "summary": "Your chart shows a dominance of Cardinal energy (55%), making you naturally oriented toward leadership, initiation, and new beginnings.",
+      "detailed_description": "With your strong Cardinal energy, you naturally take charge in situations and excel at launching new projects. You're likely the person who gets things moving in your workplace or social circle. This pioneering spirit makes you an excellent starter and innovator, though you may sometimes leave projects unfinished as you move to the next exciting beginning.",
+      "strengths": [
+        "Natural leadership abilities that others recognize and respond to",
+        "Excellent at crisis management and decisive action",
+        "Innovative thinking that leads to new solutions",
+        "Ability to motivate others and catalyze group action",
+        "Entrepreneurial spirit and comfort with initiating"
+      ],
+      "challenges": [
+        "May start too many projects without completing them",
+        "Can become impatient with slower, methodical processes",
+        "Might overwhelm others with constant new ideas and initiatives",
+        "May struggle with the maintenance phase of projects",
+        "Can experience burnout from always being in 'initiation mode'"
+      ],
+      "practical_advice": "Channel your initiating energy into areas that truly matter to you, and develop systems to ensure follow-through. Consider partnering with people who have complementary Fixed and Mutable strengths to help bring your many initiatives to completion.",
+      "life_approach": "You likely approach life as a series of new beginnings and opportunities to lead or pioneer. Your natural inclination is to start projects, initiate conversations, and catalyze change in your environment.",
+      "career_insights": "You thrive in roles requiring leadership, crisis management, and innovation. Consider entrepreneurship, emergency services, project initiation roles, leadership positions, or fields requiring quick decision-making. Careers in startups, emergency medicine, sales, leadership consulting, or as a business launcher would leverage your natural strengths.",
+      "relationship_insights": "In relationships, you often take the lead in planning activities and resolving issues. Be mindful that partners may sometimes need you to follow their lead or simply maintain comfortable routines. Your decisiveness is valuable, but balance it by developing patience and listening skills.",
+      "balance_strategies": [
+        "Before starting something new, evaluate your current commitments",
+        "Partner with people who have strong Fixed energy to help complete what you start",
+        "Schedule regular 'completion days' focused solely on finishing existing projects",
+        "Practice mindfulness to become aware of your impulse to start new things",
+        "Develop a 'one in, one out' rule: finish or delegate one project before beginning another"
+      ]
+    },
+    "stellium": {
+      "has_stellium": true,
+      "count": 1,
+      "stelliums": [
+        {
+          "planets": ["Sun", "Mercury", "Venus", "Jupiter"],
+          "title": "4 Planets in Capricorn",
+          "subtitle": "Tight Sign Stellium",
+          "description": "You have a concentration of Sun, Mercury, Venus and Jupiter in Capricorn. This gives you ambition, discipline, and strong executive abilities. You approach goals methodically and can achieve significant long-term success. Having multiple planets in one sign creates an emphasis on these qualities in your personality and life experience."
+        }
+      ]
+    }
+  }
+}
+```
+
 Note: The actual response will be dynamically generated based on the user's birth chart data. The above example is for illustrative purposes only. 

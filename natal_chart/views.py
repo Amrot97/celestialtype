@@ -330,6 +330,14 @@ class GenerateNatalChartView(APIView):
                 )
                 objects_data["overview"] = overview_tab_data
                 
+                # Generate patterns tab data
+                from .views_methods.patterns_tab_generator import generate_patterns_tab
+                patterns_tab_data = generate_patterns_tab(
+                    stellium_descriptions=objects_data.get("stelliumDescriptions", []),
+                    modality_analysis=modality_analysis
+                )
+                objects_data["patterns_tab"] = patterns_tab_data
+                
                 # Check if user is authenticated before creating a token
                 is_authenticated = request.user.is_authenticated
                 token = None
@@ -717,6 +725,105 @@ class StelliumDetectionView(APIView):
                 }
                 
                 return Response(response_data, status=status.HTTP_200_OK)
+            except Exception as e:
+                return Response(
+                    {"detail": str(e)},
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                )
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class PatternsTabView(APIView):
+    def post(self, request):
+        serializer = NatalChartSerializer(data=request.data)
+        if serializer.is_valid():
+            try:
+                # Import name_mapping
+                name_mapping = extract_data_from_json_file("name_mapping")
+                
+                # Extract data from request
+                date_of_birth = serializer.validated_data["date_of_birth"]
+                time_of_birth = serializer.validated_data.get("time_of_birth")
+                place_of_birth = serializer.validated_data["place_of_birth"]
+
+                # Get coordinates
+                coordinates = get_location(place_of_birth)
+                if not coordinates:
+                    return Response(
+                        {"detail": "Could not determine location for the given place of birth."},
+                        status=status.HTTP_400_BAD_REQUEST,
+                    )
+
+                latitude, longitude = coordinates
+                datetime_of_birth = f"{date_of_birth} {time_of_birth}" if time_of_birth else f"{date_of_birth}"
+
+                # Create chart
+                native = charts.Subject(datetime_of_birth, latitude, longitude)
+                natal = charts.Natal(native)
+
+                # Format planet positions
+                planet_positions = []
+                for obj_key in immanuel_charts:
+                    obj = natal.objects[obj_key]
+                    planet_name = name_mapping.get(obj.name, obj.name)
+                    
+                    # Only include house information if time is provided
+                    house_number = None
+                    if time_of_birth:
+                        house_number = extract_house_number(obj.house.name)
+                    
+                    sign_info = {
+                        "name": obj.sign.name,
+                        "modality": obj.sign.modality,
+                        "element": obj.sign.element,
+                    }
+                    
+                    planet_data = {
+                        "planet": planet_name,
+                        "position": {
+                            "degrees": obj.sign_longitude.degrees,
+                            "minutes": obj.sign_longitude.minutes,
+                            "seconds": obj.sign_longitude.seconds,
+                        },
+                        "sign": sign_info,
+                        "house": house_number,
+                        "movement": {
+                            "retrograde": obj.movement.retrograde if hasattr(obj, "movement") else None
+                        }
+                    }
+                    
+                    planet_positions.append(planet_data)
+
+                # Step 1: Detect stelliums based on time availability
+                if time_of_birth:
+                    stelliums = detect_stelliums(
+                        planet_positions,
+                        min_planets=3,
+                        include_points=False,
+                        tight_orb=True
+                    )
+                    stellium_descriptions = get_stellium_descriptions(stelliums)
+                else:
+                    stelliums = detect_sign_stelliums_only(
+                        planet_positions,
+                        min_planets=3,
+                        include_points=False,
+                        tight_orb=True
+                    )
+                    stellium_descriptions = get_sign_stellium_descriptions_only(stelliums)
+
+                # Step 2: Generate modality analysis
+                modality_analysis = generate_modality_analysis(planet_positions)
+                
+                # Step 3: Generate patterns tab data
+                from .views_methods.patterns_tab_generator import generate_patterns_tab
+                patterns_tab_data = generate_patterns_tab(
+                    stellium_descriptions=stellium_descriptions,
+                    modality_analysis=modality_analysis
+                )
+                
+                return Response(patterns_tab_data, status=status.HTTP_200_OK)
             except Exception as e:
                 return Response(
                     {"detail": str(e)},
