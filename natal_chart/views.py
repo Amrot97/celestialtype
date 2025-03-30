@@ -103,7 +103,7 @@ from natal_chart.views_methods.GenerateNatalChartView import (
     calculate_signs_power,
 )
 from natal_chart.views_methods.stellium_detection import (
-    detect_stelliums, 
+    detect_stelliums,
     get_stellium_descriptions,
     detect_sign_stelliums_only,
     get_sign_stellium_descriptions_only
@@ -111,6 +111,8 @@ from natal_chart.views_methods.stellium_detection import (
 from natal_chart.views_methods.modality_analyzer import generate_modality_analysis
 from natal_chart.views_methods.element_analyzer import analyze_elements
 from natal_chart.views_methods.element_relationship_analyzer import analyze_element_relationships, get_all_element_relationships
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 
 class CustomToken(RefreshToken):
@@ -123,6 +125,7 @@ class CustomToken(RefreshToken):
         return token
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class GenerateNatalChartView(APIView):
     def post(self, request):
         serializer = NatalChartSerializer(data=request.data)
@@ -355,6 +358,7 @@ class ExtractDataFromTokenView(APIView):
             return Response({"detail": str(e)}, status=status.HTTP_400_BAD_REQUEST)
         
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ElementAnalysisView(APIView):
     def post(self, request):
         serializer = NatalChartSerializer(data=request.data)
@@ -429,6 +433,7 @@ class ElementAnalysisView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ElementRelationshipsView(APIView):
     def post(self, request):
         serializer = NatalChartSerializer(data=request.data)
@@ -513,6 +518,7 @@ class ElementRelationshipsView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ModalityAnalysisView(APIView):
     def post(self, request):
         serializer = NatalChartSerializer(data=request.data)
@@ -587,6 +593,7 @@ class ModalityAnalysisView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class StelliumDetectionView(APIView):
     def post(self, request):
         serializer = NatalChartSerializer(data=request.data)
@@ -670,7 +677,7 @@ class StelliumDetectionView(APIView):
 
                 response_data = {
                     "stelliums": stelliums,
-                    "stelliumDescriptions": stellium_descriptions
+                    "stelliumDescriptions": stellium_descriptions,
                 }
                 
                 return Response(response_data, status=status.HTTP_200_OK)
