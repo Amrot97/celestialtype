@@ -234,15 +234,66 @@ class GenerateNatalChartView(APIView):
                 for planet in main_planets:
                     if planet in ordered_psychological_insights:
                         insight = ordered_psychological_insights[planet]
-                        # Add the subtitle from planet_titles
-                        if planet in planet_titles:
-                            insight["subtitle"] = planet_titles[planet]
-                        # Add the planet name and sign information
-                        insight["planet"] = planet
-                        # Get the sign information from planet_sign_info
-                        if planet in planet_sign_info:
-                            insight["sign"] = planet_sign_info[planet]["name"]
-                        psychological_insights.append(insight)
+                        
+                        # Create the base structure
+                        formatted_insight = {
+                            "title": insight.get("title", f"{planet} in Unknown"),
+                            "subtitle": planet_titles.get(planet, ""),
+                            "traits": insight.get("traits", ""),
+                            "planet": planet,
+                            "descriptions": []
+                        }
+                        
+                        # Add descriptions based on planet type
+                        if planet == "Sun":
+                            # Sun format
+                            descriptions = [
+                                {"name": "Explanation", "description": insight.get("explanation", "")},
+                                {"name": "Innate Talents", "description": insight.get("innate_talents", "")},
+                                {"name": "Growth Areas", "description": insight.get("growth_areas", "")},
+                                {"name": "Personal Growth", "description": insight.get("personal_growth", "")},
+                                {"name": "Closing Affirmation", "description": insight.get("closing_affirmation", "")}
+                            ]
+                        elif planet == "Moon":
+                            # Moon format
+                            descriptions = [
+                                {"name": "Explanation", "description": insight.get("explanation", "")},
+                                {"name": "Emotional Strengths", "description": insight.get("emotional_strengths", "")},
+                                {"name": "Emotional Challenges", "description": insight.get("emotional_challenges", "")},
+                                {"name": "Actionable Emotional Care", "description": insight.get("actionable_emotional_care", "")},
+                                {"name": "Closing Affirmation", "description": insight.get("closing_affirmation", "")}
+                            ]
+                        elif planet in ["Venus", "Mars", "Mercury"]:
+                            # Venus, Mars, Mercury format
+                            descriptions = [
+                                {"name": "Strengths in Connection", "description": insight.get("strengths_in_connection", "")},
+                                {"name": "Challenges to Refine", "description": insight.get("challenges_to_refine", "")},
+                                {"name": "Actionable Strategies", "description": insight.get("actionable_strategies", "")},
+                                {"name": "Affirmation", "description": insight.get("affirmation", "")}
+                            ]
+                        elif planet in ["Uranus", "Neptune", "Pluto"]:
+                            # Outer planets format
+                            descriptions = [
+                                {"name": "Core Themes", "description": insight.get("core_themes", "")},
+                                {"name": "Collective Purpose", "description": insight.get("collective_purpose", "")},
+                                {"name": "Strengths", "description": insight.get("strengths", "")},
+                                {"name": "Challenges", "description": insight.get("challenges", "")},
+                                {"name": "Actionable Contribution", "description": insight.get("actionable_contribution", "")},
+                                {"name": "Affirmation", "description": insight.get("affirmation", "")}
+                            ]
+                        else:
+                            # Default format for other planets like Jupiter, Saturn
+                            descriptions = [
+                                {"name": "Explanation", "description": insight.get("explanation", "")}
+                            ]
+                            # Add any available fields
+                            for field in insight:
+                                if field not in ["title", "subtitle", "traits", "planet"] and field not in [d["name"] for d in descriptions]:
+                                    descriptions.append({"name": field.replace("_", " ").title(), "description": insight.get(field, "")})
+                        
+                        # Filter out empty descriptions
+                        formatted_insight["descriptions"] = [d for d in descriptions if d["description"]]
+                        psychological_insights.append(formatted_insight)
 
                 # Store user data for passing to tab generators
                 user_data = {

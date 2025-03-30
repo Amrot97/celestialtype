@@ -87,7 +87,7 @@ def generate_modality_analysis(planets):
     modality_percentages = []
     for modality, value in percentages.items():
         modality_percentages.append({
-            "name": modality,
+            "name": modality.capitalize(),
             "value": value
         })
     
