@@ -100,14 +100,13 @@ def analyze_elements(planets):
     # Generate descriptions based on element distribution
     description = generate_element_description(dominant_element, weakest_element, percentages)
     
-    # Return the complete analysis
+    # Return the analysis without planet_details
     return {
         "counts": elements,
         "percentages": percentages,
         "dominant_element": dominant_element,
         "weakest_element": weakest_element,
         "element_balance": element_balance,
-        "planet_details": planet_details,
         "description": description
     }
     
