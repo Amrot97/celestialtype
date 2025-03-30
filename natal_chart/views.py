@@ -459,7 +459,7 @@ class ElementAnalysisView(APIView):
                     element_percentages = []
                     for element, value in element_analysis["percentages"].items():
                         element_percentages.append({
-                            "name": element,
+                            "name": element.capitalize(),
                             "value": value
                         })
                     # Sort by value in descending order
