@@ -83,12 +83,9 @@ def generate_modality_analysis(planets):
     # Generate descriptions based on modality distribution
     description = generate_modality_description(dominant_modality, percentages, modalities)
     
-    # Return the complete analysis
+    # Return only the dominant modality and description in the analysis
     return {
-        "counts": modalities,
-        "percentages": percentages,
         "dominant_modality": dominant_modality,
-        "planet_details": planet_details,
         "description": description
     }
     
