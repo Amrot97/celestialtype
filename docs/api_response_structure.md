@@ -34,8 +34,7 @@ The response includes the following main sections:
   "overview": {...},                // Overview data for the app's Overview tab
   "psychologicalInsights": [...],  // Array of insights
   "elements_tab": {...},          // Consolidated element analysis for UI
-  "patterns_tab": {...},          // Consolidated patterns (modality and stelliums) for UI
-  "allElementRelationships": [...]  // All significant element relationships
+  "patterns_tab": {...}           // Consolidated patterns (modality and stelliums) for UI
 }
 ```
 
@@ -292,7 +291,21 @@ Comprehensive element analysis data for UI rendering:
       "water": integer
     },
     "interpretation": "Analysis of conscious and unconscious elemental patterns"
-  }
+  },
+  "allElementRelationships": [
+    {
+      "element1": "fire|earth|air|water",
+      "element2": "fire|earth|air|water",
+      "element1_percentage": integer,
+      "element2_percentage": integer,
+      "interaction": "Type of interaction",
+      "harmony": "harmonious|complex|challenging",
+      "description": "Description of the relationship",
+      "balance": "Description of balance state",
+      "significance": float
+    },
+    // Additional relationships...
+  ]
 }
 ```
 
@@ -338,27 +351,6 @@ Consolidated patterns data combining modality analysis and stellium information:
     ]
   }
 }
-```
-
-## All Element Relationships
-
-Array of significant element relationships:
-
-```json
-[
-  {
-    "element1": "fire|earth|air|water",
-    "element2": "fire|earth|air|water",
-    "element1_percentage": integer,
-    "element2_percentage": integer,
-    "interaction": "Type of interaction",
-    "harmony": "harmonious|complex|challenging",
-    "description": "Description of the relationship",
-    "balance": "Description of balance state",
-    "significance": float
-  },
-  // Additional relationships...
-]
 ```
 
 ## Endpoint-Specific Responses

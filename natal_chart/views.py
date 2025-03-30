@@ -297,7 +297,6 @@ class GenerateNatalChartView(APIView):
                 # Generate elements tab response instead of separate element analysis
                 from .views_methods.element_analyzer import generate_elements_tab_response
                 elements_tab_data = generate_elements_tab_response(formatted_planets)
-                objects_data["elements_tab"] = elements_tab_data
                 
                 # We'll keep allElementRelationships for additional relationship data
                 # that might be useful elsewhere in the app
@@ -305,7 +304,9 @@ class GenerateNatalChartView(APIView):
                 element_analysis = analyze_elements(formatted_planets)
                 all_relationships = get_all_element_relationships(element_analysis["percentages"])
                 if all_relationships:
-                    objects_data["allElementRelationships"] = all_relationships
+                    elements_tab_data["allElementRelationships"] = all_relationships
+                
+                objects_data["elements_tab"] = elements_tab_data
                 
                 # Generate overview tab data
                 from .views_methods.overview_tab_generator import generate_overview_tab
