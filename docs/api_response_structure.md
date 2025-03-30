@@ -177,64 +177,6 @@ Array of objects, each representing a psychological insight for a planet:
 }
 ```
 
-## Stellium Descriptions
-
-Array of objects describing stelliums (concentrations of planets):
-
-```json
-{
-  "planets": ["Planet1", "Planet2", "Planet3", ...],
-  "title": "X Planets in Sign",
-  "subtitle": "Type of Stellium",
-  "text": "Detailed description of the stellium's effect"
-}
-```
-
-## Modality Analysis
-
-Analysis of Cardinal, Fixed, and Mutable energies:
-
-```json
-{
-  "dominant_modality": "cardinal|fixed|mutable",
-  "percentages": {
-    "cardinal": integer,
-    "fixed": integer,
-    "mutable": integer
-  },
-  "modality_percentages": [
-    {
-      "name": "cardinal|fixed|mutable",
-      "value": integer
-    },
-    // Sorted by value in descending order
-  ],
-  "description": {
-    "dominant": "One sentence summary of dominant modality",
-    "cardinal": "Description of cardinal energy expression",
-    "fixed": "Description of fixed energy expression",
-    "mutable": "Description of mutable energy expression",
-    "overall": "Overall modality balance description",
-    
-    // Detailed dominant modality information
-    "dominant_title": "Modality Name (Sign List)",
-    "dominant_core_traits": "Key traits of the modality",
-    "dominant_description": "Detailed description of modality expression",
-    "dominant_strengths": ["Strength1", "Strength2", ...],
-    "dominant_challenges": ["Challenge1", "Challenge2", ...],
-    "dominant_career_insights": "Career guidance based on modality",
-    "dominant_relationship_insights": "Relationship dynamics based on modality",
-    "dominant_balance_strategies": ["Strategy1", "Strategy2", ...],
-    "dominant_examples": ["Example1", "Example2", ...],
-    
-    // Overall pattern analysis
-    "pattern_summary": "Summary of modality pattern",
-    "pattern_life_approach": "How this modality pattern affects life approach",
-    "pattern_practical_advice": "Practical advice for this modality pattern"
-  }
-}
-```
-
 ## Elements Tab Structure
 
 Comprehensive element analysis data for UI rendering:
@@ -353,88 +295,24 @@ Consolidated patterns data combining modality analysis and stellium information:
 }
 ```
 
-## Endpoint-Specific Responses
+## Standalone Endpoints
 
-### Element Analysis Endpoint
+The API provides several standalone endpoints that return specific parts of the natal chart analysis:
+
+### Elements Tab Endpoint
 
 `POST /natal-chart/elements/`
 
-Returns the element analysis with both the traditional percentages object and the new element_percentages array format.
-
-```json
-{
-  "counts": {
-    "fire": float,
-    "earth": float,
-    "air": float,
-    "water": float
-  },
-  "percentages": {
-    "fire": integer,
-    "earth": integer,
-    "air": integer,
-    "water": integer
-  },
-  "element_percentages": [
-    {
-      "name": "fire|earth|air|water",
-      "value": integer
-    },
-    // Sorted by value in descending order
-  ],
-  "dominant_element": "fire|earth|air|water",
-  "weakest_element": "fire|earth|air|water",
-  "element_balance": {
-    "fire_earth": "string",
-    "air_water": "string"
-  },
-  "description": {
-    // Descriptions of element expressions
-  }
-}
-```
-
-### Element Relationships Endpoint
-
-`POST /natal-chart/elements/relationships/`
-
-Returns element relationship data.
-
-### Modality Analysis Endpoint
-
-`POST /natal-chart/modalities/`
-
-Returns the modality analysis with both the traditional percentages object and the new modality_percentages array format.
-
-```json
-{
-  "dominant_modality": "cardinal|fixed|mutable",
-  "percentages": {
-    "cardinal": integer,
-    "fixed": integer,
-    "mutable": integer
-  },
-  "modality_percentages": [
-    {
-      "name": "cardinal|fixed|mutable",
-      "value": integer
-    },
-    // Sorted by value in descending order
-  ],
-  "description": {
-    // Detailed modality descriptions
-  }
-}
-```
-
-### Stellium Detection Endpoint
-
-`POST /natal-chart/stelliums/`
-
-Returns just the stellium descriptions section from the main response.
+Returns the same structure as the `elements_tab` field in the main response.
 
 ### Patterns Tab Endpoint
 
 `POST /natal-chart/patterns/`
 
-Returns consolidated patterns data combining modality analysis and stellium information, structured for the Patterns tab UI. 
+Returns the same structure as the `patterns_tab` field in the main response.
+
+### Element Relationships Endpoint
+
+`POST /natal-chart/elements/relationships/`
+
+Returns element relationship data for detailed analysis of how elements interact in the chart.
