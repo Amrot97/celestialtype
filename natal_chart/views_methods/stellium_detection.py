@@ -318,7 +318,7 @@ def get_stellium_descriptions(stelliums):
         stelliums: Dictionary with detected stelliums
         
     Returns:
-        Dictionary with stellium descriptions
+        List of simplified stellium descriptions
     """
     descriptions = []
     
@@ -328,10 +328,8 @@ def get_stellium_descriptions(stelliums):
         count = stellium["count"]
         planets = stellium["planets"]
         
-        # Create basic description
+        # Create simplified description
         description = {
-            "type": "sign",
-            "location": location,
             "planets": planets,
             "title": f"{count} Planets in {location}",
             "subtitle": f"{'Tight ' if stellium.get('tight') else ''}Sign Stellium",
@@ -346,10 +344,8 @@ def get_stellium_descriptions(stelliums):
         count = stellium["count"]
         planets = stellium["planets"]
         
-        # Create basic description
+        # Create simplified description
         description = {
-            "type": "house",
-            "location": location,
             "planets": planets,
             "title": f"{count} Planets in {location}",
             "subtitle": f"{'Tight ' if stellium.get('tight') else ''}House Stellium",
@@ -368,7 +364,7 @@ def get_sign_stellium_descriptions_only(stelliums):
         stelliums: Dictionary with detected stelliums
         
     Returns:
-        Dictionary with stellium descriptions
+        List of simplified stellium descriptions
     """
     descriptions = []
     
@@ -378,10 +374,8 @@ def get_sign_stellium_descriptions_only(stelliums):
         count = stellium["count"]
         planets = stellium["planets"]
         
-        # Create basic description
+        # Create simplified description
         description = {
-            "type": "sign",
-            "location": location,
             "planets": planets,
             "title": f"{count} Planets in {location}",
             "subtitle": f"{'Tight ' if stellium.get('tight') else ''}Sign Stellium",

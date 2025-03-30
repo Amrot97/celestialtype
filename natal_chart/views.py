@@ -256,7 +256,8 @@ class GenerateNatalChartView(APIView):
                         include_points=False,  # Set to True to include points like North Node
                         tight_orb=True  # Detect tight stelliums (planets within 8 degrees)
                     )
-                    objects_data["stelliums"] = stelliums
+                    # Don't include stelliums in the response
+                    # objects_data["stelliums"] = stelliums
                     
                     # Get stellium descriptions
                     stellium_descriptions = get_stellium_descriptions(stelliums)
@@ -269,7 +270,8 @@ class GenerateNatalChartView(APIView):
                         include_points=False,  # Set to True to include points like North Node
                         tight_orb=True  # Detect tight stelliums (planets within 8 degrees)
                     )
-                    objects_data["stelliums"] = sign_stelliums
+                    # Don't include stelliums in the response
+                    # objects_data["stelliums"] = sign_stelliums
                     
                     # Get only sign stellium descriptions
                     sign_stellium_descriptions = get_sign_stellium_descriptions_only(sign_stelliums)
@@ -640,20 +642,18 @@ class StelliumDetectionView(APIView):
                     }
                     
                     planet_data = {
-                        "name": planet_name,
-                        "sign": sign_info["name"],
+                        "planet": planet_name,
+                        "position": {
+                            "degrees": obj.sign_longitude.degrees,
+                            "minutes": obj.sign_longitude.minutes,
+                            "seconds": obj.sign_longitude.seconds,
+                        },
+                        "sign": sign_info,
                         "house": house_number,
                         "movement": {
                             "retrograde": obj.movement.retrograde if hasattr(obj, "movement") else None
                         }
                     }
-                    
-                    if "position" in planet_data:
-                        planet_data["position"] = {
-                            "degrees": obj.sign_longitude.degrees,
-                            "minutes": obj.sign_longitude.minutes,
-                            "seconds": obj.sign_longitude.seconds,
-                        }
                     
                     planet_positions.append(planet_data)
 
@@ -676,7 +676,7 @@ class StelliumDetectionView(APIView):
                     stellium_descriptions = get_sign_stellium_descriptions_only(stelliums)
 
                 response_data = {
-                    "stelliums": stelliums,
+                    # "stelliums": stelliums,  # Remove stelliums from the response
                     "stelliumDescriptions": stellium_descriptions,
                 }
                 
