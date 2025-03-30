@@ -303,16 +303,15 @@ class GenerateNatalChartView(APIView):
                     
                     formatted_planets.append(formatted_planet)
                 
+                # Generate elements tab response instead of separate element analysis
+                from .views_methods.element_analyzer import generate_elements_tab_response
+                elements_tab_data = generate_elements_tab_response(formatted_planets)
+                objects_data["elements_tab"] = elements_tab_data
+                
+                # We'll keep allElementRelationships for additional relationship data
+                # that might be useful elsewhere in the app
+                from .views_methods.element_relationship_analyzer import get_all_element_relationships
                 element_analysis = analyze_elements(formatted_planets)
-                objects_data["elementAnalysis"] = element_analysis
-                
-                # Generate element relationship analysis (new addition)
-                # Get the relationship between the two most dominant elements
-                primary_relationship = analyze_element_relationships(element_analysis["percentages"])
-                if primary_relationship:
-                    objects_data["elementRelationship"] = primary_relationship
-                
-                # Get all significant element relationships
                 all_relationships = get_all_element_relationships(element_analysis["percentages"])
                 if all_relationships:
                     objects_data["allElementRelationships"] = all_relationships
