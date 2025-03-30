@@ -210,50 +210,11 @@ def get_psychological_insights(planet_name, sign_name, house_number=None, title=
         # If we have a description, use it; otherwise fall back to template
         if description:
             # Add house information if available
-            explanation = None
-            
-            # For Venus and Mars, we need to handle different fields
-            if planet_name.lower() == "venus":
-                # Venus descriptions have strengths_in_connection and challenges_to_refine fields
-                explanation = description.get("strengths_in_connection", "")
-                if "challenges_to_refine" in description:
-                    explanation += " " + description["challenges_to_refine"]
-            elif planet_name.lower() == "mars":
-                # Mars descriptions have strengths_in_action and challenges_to_navigate fields
-                explanation = description.get("strengths_in_action", "")
-                if "challenges_to_navigate" in description:
-                    explanation += " " + description["challenges_to_navigate"]
-            
-            # For outer planets, they typically have explanation field
-            elif planet_name.lower() in ["pluto", "uranus", "neptune"]:
-                # Outer planets have collective_purpose and strengths fields
-                explanation = description.get("collective_purpose", "")
-                if "strengths" in description:
-                    explanation += " " + description["strengths"]
-            
-            # For Sun and Moon, use the explanation field
-            else:
-                explanation = description.get("explanation", "")
-                
-            # If no explanation was found, use a placeholder
-            if not explanation:
-                explanation = f"This describes the influence of {planet_name} in {sign_name}"
-                
-            # Add house information
             if house_number:
-                explanation += f" in House {house_number}"
+                description["house"] = house_number
             
-            # Return the complete insight
-            insight = {
-                "planet": planet_name,
-                "sign": sign_name,
-                "house": house_number,
-                "title": description.get("title", title or f"{planet_name} in {sign_name}"),
-                "description": explanation,
-                "keywords": description.get("keywords", ["placeholder", "keywords"])
-            }
-            
-            return insight
+            # Return the complete insight with original structure
+            return description
         else:
             # Fallback to template for unsupported planets or signs
             if not planet_name or not sign_name:
