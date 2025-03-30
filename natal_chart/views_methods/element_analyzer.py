@@ -618,17 +618,4 @@ def generate_elements_tab_response(planets):
         },
         "relationship": formatted_relationship,
         "conscious_vs_unconscious": conscious_unconscious
-    }
-
-# Ensure element_percentages is included in the response
-if "element_percentages" not in element_analysis:
-    # Create it if not already present (for backward compatibility)
-    element_percentages = []
-    for element, value in element_analysis["percentages"].items():
-        element_percentages.append({
-            "name": element.capitalize(),
-            "value": value
-        })
-    # Sort by value in descending order
-    element_percentages = sorted(element_percentages, key=lambda x: x["value"], reverse=True)
-    element_analysis["element_percentages"] = element_percentages 
+    } 
