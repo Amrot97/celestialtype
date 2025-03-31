@@ -4,7 +4,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -16,27 +15,46 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
 
 # Django
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-
-# Virtual Environment
-venv/
-ENV/
+media/
+static/
+staticfiles/
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+*.sublime-*
+.project
+.pydevproject
 
-# OS specific
+# Test outputs
+tests/responses/*.json
+tests/responses/*.html
+tests/logs/*.log
+tests/logs/db.sqlite3
+
+# Documentation
+docs/**/*.pdf
+docs/**/*.docx
+docs/**/*.tmp
+
+# OS
 .DS_Store
 .DS_Store?
 ._*
@@ -47,4 +65,9 @@ Thumbs.db
 
 # Project specific
 ephemeris/
-temp_packages/ 
+temp_packages/
+*.env
+.env.*
+!.env.example
+node_modules/
+coverage/ 
