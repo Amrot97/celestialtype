@@ -1,0 +1,16 @@
+[Unit]
+Description=Gunicorn daemon for CelestialType
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/celestialtype
+Environment="PATH=/var/www/celestialtype/venv/bin"
+Environment="DJANGO_SETTINGS_MODULE=backend.production_settings"
+ExecStart=/var/www/celestialtype/venv/bin/gunicorn \
+    --config /var/www/celestialtype/gunicorn_config.py \
+    backend.wsgi:application
+
+[Install]
+WantedBy=multi-user.target 
